@@ -155,9 +155,9 @@ header.masthead {
   width: 100%;
   padding-top: 150px;
   padding-bottom: 100px;
-  color:  #222222;
-  background: url("../img/bg-pattern.png"), #aec6cf;
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #ffffff, #aec6cf);
+  color: black;
+  background: url("../img/bg-pattern.png"), #222222;
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #222831, #aec6cf);
 }
 
 header.masthead .header-content {
@@ -374,7 +374,7 @@ footer {
   padding: 25px 0;
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
-  background-color: #222222;
+  background-color: #222831;
 }
 
 footer p {
