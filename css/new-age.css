@@ -65,6 +65,7 @@ section h2 {
   transition: all .35s;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
@@ -72,6 +73,7 @@ section h2 {
   color: #222831;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
