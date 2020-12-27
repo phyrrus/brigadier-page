@@ -288,7 +288,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("img/example-27.png");
+  background: linear-gradient(to right, #222831, #aec6cf);
   background-position: center;
   background-size: cover;
 }
