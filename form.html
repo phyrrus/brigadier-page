@@ -27,11 +27,6 @@
   <!-- Custom styles for this template -->
   <link href="css/new-age.css" rel="stylesheet">
 
-  function deleteRow(btn) {
-    var row = btn.parentNode.parentNode;
-    row.parentNode.removeChild(row);
-  }
-
 </head>
 
 <body id="page-top">
@@ -58,9 +53,8 @@
             For more information read our terms and conditions and privacy policy page.
         </p>
         <hr>
-        <form class="container">
-          <div>
-          <h3> Your details</h3>
+        <form class="container" method="post" action="https://rssexample.azurewebsites.net/api/formtest?">
+          <h3> Contact Information</h3>
           <table class="table table-bordered table-hover" id="tab_logic">
             <thead>
               <tr>
@@ -83,27 +77,684 @@
               </tr>
             </tbody>
           </table>
-        </div>
-        <div></div>
-          <h3> Porfolio</h3>
+          <h3> Porfolio Information</h3>
           <table class="table table-bordered table-hover" id="tab_logic">
             <thead>
               <tr>
-                <th class="text-center"> Fund </th>
                 <th class="text-center"> Ticker </th>
                 <th class="text-center"> % </th>
               </tr>
             </thead>
             <tbody>
               <tr id='addr0'>
-                <td> 
-                  <input type="text" name='name0'  placeholder='Fund Name' class="form-control"/>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
                 </td>
                 <td>
-                  <input type="text" name='tick0' placeholder='Ticker' class="form-control"/>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr1'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
                 </td>
                 <td>
-                  <select type="text" name="gender0" class="form-control">
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr2'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr3'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr4'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr5'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr6'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr7'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr8'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr9'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                                  <option name="2.5" value="2.5">2.5</option>
+                                  <option name="5" value="5">5</option>
+                                  <option name="10" value="10">10</option>
+                                  <option name="15" value="15">15</option>
+                                  <option name="20" value="20">20</option>
+                                  <option name="25" value="25">25</option>
+                                  <option name="30" value="30">30</option>
+                                  <option name="35" value="35">35</option>
+                                  <option name="40" value="40">40</option>
+                                  <option name="45" value="45">45</option>
+                                  <option name="50" value="50">50</option>
+                                  <option name="55" value="55">55</option>
+                                  <option name="60" value="60">60</option>
+                                  <option name="65" value="65">65</option>
+                                  <option name="70" value="70">70</option>
+                                  <option name="75" value="75">75</option>
+                                  <option name="80" value="80">80</option>
+                                  <option name="85" value="85">85</option>
+                                  <option name="90" value="90">90</option>
+                                  <option name="95" value="95">95</option>
+                    <option name="100" value="100">100</option>
+                  </select>
+                </td>
+              </tr>
+              <tr id='addr10'>
+                <td>
+                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                    <option name="VFEM" value="VFEM">VFEM</option>
+                    <option name="VECP" value="VECP">VECP</option>
+                    <option name="VETY" value="VETY">VETY</option>
+                    <option name="VUKE" value="VUKE">VUKE</option>
+                    <option name="VUKG" value="VUKG">VUKG</option>
+                    <option name="VMID" value="VMID">VMID</option>
+                    <option name="VMIG" value="VMIG">VMIG</option>
+                    <option name="VHYL" value="VHYL">VHYL</option>
+                    <option name="VHYG" value="VHYG">VHYG</option>
+                    <option name="VWRP" value="VWRP">VWRP</option>
+                    <option name="VWRD" value="VWRD">VWRD</option>
+                    <option name="VWRL" value="VWRL">VWRL</option>
+                    <option name="VAPX" value="VAPX">VAPX</option>
+                    <option name="VEUR" value="VEUR">VEUR</option>
+                    <option name="VERG" value="VERG">VERG</option>
+                    <option name="VERX" value="VERX">VERX</option>
+                    <option name="VEVE" value="VEVE">VEVE</option>
+                    <option name="VHVG" value="VHVG">VHVG</option>
+                    <option name="VJPN" value="VJPN">VJPN</option>
+                    <option name="VDJP" value="VDJP">VDJP</option>
+                    <option name="VNRT" value="VNRT">VNRT</option>
+                    <option name="VAGS" value="VAGS">VAGS</option>
+                    <option name="VAGP" value="VAGP">VAGP</option>
+                    <option name="VLIQ" value="VLIQ">VLIQ</option>
+                    <option name="VMVL" value="VMVL">VMVL</option>
+                    <option name="VMOM" value="VMOM">VMOM</option>
+                    <option name="VVAL" value="VVAL">VVAL</option>
+                    <option name="VUAG" value="VUAG">VUAG</option>
+                    <option name="VUSD" value="VUSD">VUSD</option>
+                    <option name="VUSA" value="VUSA">VUSA</option>
+                    <option name="VUTY" value="VUTY">VUTY</option>
+                    <option name="VGVA" value="VGVA">VGVA</option>
+                  </select>
+                </td>
+                <td>
+                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
                                   <option name="2.5" value="2.5">2.5</option>
                                   <option name="5" value="5">5</option>
                                   <option name="10" value="10">10</option>
@@ -130,40 +781,11 @@
               </tr>
             </tbody>
           </table>
-          </div>
-            <a id="add_row" class="btn btn-success pull-left">Add Row</a>
-            <a id='delete_row' class="btn btn-danger pull-right">Delete Row</a>
-          </div>
+        <p> <button type="submit"  class="btn btn-primary btn-block">Send contact and portfolio information</button> </p>
       </form>
-      
-          
       </div>
     </div>
-  </section>
-
-  <table id="dsTable">
-    <tbody>
-      <tr>
-        <td>Relationship Type</td>
-        <td>Date of Birth</td>
-        <td>Gender</td>
-      </tr>
-      <tr>
-        <td>Spouse</td>
-        <td>1980-22-03</td>
-        <td>female</td>
-        <td><input type="button" value="Add" onclick="add()"/></td>
-        <td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
-      </tr>
-      <tr>
-        <td>Child</td>
-        <td>2008-23-06</td>
-        <td>female</td>
-        <td><input type="button" value="Add" onclick="add()"/></td>
-        <td><input type="button" value="Delete" onclick="deleteRow(this)"/></td>
-      </tr>
-    </tbody>
-  </table>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+  </section>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
 
 
   <footer>
