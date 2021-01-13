@@ -52,26 +52,7 @@
             We will use your email only for the newsletter and we do not sell your data to anybody else.
             For more information read our terms and conditions and privacy policy page.
         </p>
-        <hr>
-        <form method="post" action="https://rssexample.azurewebsites.net/api/formtest">
-          <div class="form-group">
-            <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required="required" />
-          </div>
-        
-          <div class="form-group">
-            <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required="required" />
-          </div>
-        
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required="required" />
-          </div>
-        
-          <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-        </form>
-        
+        <hr>    
         <form class="container" method="post" action="https://rssexample.azurewebsites.net/api/formtest">
           <h3> Contact Information</h3>
           <table class="table table-bordered table-hover" id="tab_logic">
@@ -105,9 +86,9 @@
               </tr>
             </thead>
             <tbody>
-              <tr id='addr0'>
+              <tr>
                 <td>
-                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                  <select type="text" name="tick0" id = 'tick0' placeholder = "Ticker" class="form-control">
                     <option name="VFEM" value="VFEM">VFEM</option>
                     <option name="VECP" value="VECP">VECP</option>
                     <option name="VETY" value="VETY">VETY</option>
@@ -143,7 +124,7 @@
                   </select>
                 </td>
                 <td>
-                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                  <select type="text" name="perc0" id = 'perc0' placeholder = "Percentage"  class="form-control">
                                   <option name="2.5" value="2.5">2.5</option>
                                   <option name="5" value="5">5</option>
                                   <option name="10" value="10">10</option>
@@ -168,9 +149,9 @@
                   </select>
                 </td>
               </tr>
-              <tr id='addr1'>
+              <tr id="1"> 
                 <td>
-                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                  <select type="text" name="tick1" id = "tick1" placeholder = "Ticker" class="form-control">
                     <option name="VFEM" value="VFEM">VFEM</option>
                     <option name="VECP" value="VECP">VECP</option>
                     <option name="VETY" value="VETY">VETY</option>
@@ -206,7 +187,7 @@
                   </select>
                 </td>
                 <td>
-                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                  <select type="text" name="perc" id = "perc1" placeholder = "Percentage"  class="form-control">
                                   <option name="2.5" value="2.5">2.5</option>
                                   <option name="5" value="5">5</option>
                                   <option name="10" value="10">10</option>
@@ -231,9 +212,9 @@
                   </select>
                 </td>
               </tr>
-              <tr id='addr2'>
+              <tr id = "2">
                 <td>
-                  <select type="text" name="tick" placeholder = "Ticker" class="form-control">
+                  <select type="text" name="tick2" id = "tick2" placeholder = "Ticker" class="form-control">
                     <option name="VFEM" value="VFEM">VFEM</option>
                     <option name="VECP" value="VECP">VECP</option>
                     <option name="VETY" value="VETY">VETY</option>
@@ -269,7 +250,7 @@
                   </select>
                 </td>
                 <td>
-                  <select type="text" name="perc" placeholder = "Percentage"  class="form-control">
+                  <select type="text" name="perc2" id = "perc2" placeholder = "Percentage"  class="form-control">
                                   <option name="2.5" value="2.5">2.5</option>
                                   <option name="5" value="5">5</option>
                                   <option name="10" value="10">10</option>
