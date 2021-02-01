@@ -294,95 +294,88 @@
                                 </div>
                                 <div class="form-outer">
                                     <form>
-                                      <div class="page slide-page">
-                                        <div class="title">Contact Info:</div>
-                                        <div class="field">
-                                          <div class="label">First Name</div>
-                                          <input type="text" id="first-name-text"><br/>
-                                          <span id="first-error"></span>
-                                        </div>
-                                        <div class="field">
-                                          <div class="label">Last Name</div>
-                                          <input type="text" id="last-name-text"><br/>
-                                          <span id="last-error"></span>
-                                        </div>
-                                        <div class="field">
-                                          <div class="label">Email Address</div>
-                                          <input type="text" id="email-text"><br/>
-                                          <span id="email-error"></span>
-                                        </div>
-                                        <div class="field">
-                                          <button class="firstNext next">Next</button>
-                                        </div>
+                                        <div class="page slide-page">
+                                            <div class="title">Contact Info:</div>
+                                            <div class="field">
+                                                <div class="label">First Name</div>
+                                                <input type="text" id="first-name-text"><br/>
+                                                <span id="first-error"></span>
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">Last Name</div>
+                                                <input type="text" id="last-name-text"><br/>
+                                                <span id="last-error"></span>
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">Email Address</div>
+                                                <input type="text" id="email-text"><br/>
+                                                <span id="email-error"></span>
+                                            </div>
+                                            <div class="field">
+                                                <button class="firstNext next">Next</button>
+                                            </div>
                                       </div>
                                       <div class="page">
-                                        <div class="title">Portfolio Info:</div>
-                                        <div class="field">
-                                          <span id="price-error"></span>
-                                          <span id="table-error"></span>
+                                          <div class="title">Portfolio Info:</div>
+                                          <div class="field">
+                                              <span id="price-error"></span>
+                                              <span id="table-error"></span>
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">Date</div>
+                                                <input type="date" id="date">
+                                                <span id="date-error"></span>
+                                            </div>
+                                            <div class="field">
+                                                <div class="label">Items</div>
+                                                <select id="first-selection">
+                                                    <option selected>Select Any Category</option>
+                                                </select>&nbsp;
+                                                <select id="second-selection">
+                                                    <option selected>Select Any Sub Item</option>
+                                                </select>
+                                            </div>
+                                            <div class="field">
+                                                <table id="item-table" style="width: 100%;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Category</th>
+                                                            <th>Item</th>
+                                                            <th>Price</th>
+                                                            <th>Quantity</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr id="1">
+                                                            <td> <label id="first-text1"></label> </td>
+                                                            <td> <label id="second-text1"></label> </td>
+                                                            <td><label id="price-text1">0</label> <input type="hidden" value="" id="item-price1"></td>
+                                                            <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="field">
+                                                <button type="button" id="Btnadd">Add</button>&nbsp;
+                                                <button type="button" id="Btndelete">Delete</button>
+                                            </div>
+                                            <div class="field btns">
+                                                <button class="prev-1 prev">Previous</button>
+                                                <button class="next-1 next" id="nextbtn">Next</button>
+                                            </div>
                                         </div>
-                                        <div class="field">
-                                          <div class="label">Date</div>
-                                          <input type="date" id="date">
-                                          <span id="date-error"></span>
+                                        <div class="page">
+                                            <div class="title">
+                                                <label><input type="checkbox" id="terms-and-condition">I read terms & condition</label>
+                                                <label><input type="checkbox" id="terms-and-condition">I read privacy terms</label>
+                                            </div>
+                                            <div class="field btns">
+                                                <button class="prev-2 prev">Previous</button>
+                                                <button class="submit" type="submit">Join the club</button>
+                                            </div>
                                         </div>
-                                        <div class="field">
-                                          <div class="label">Items</div>
-                                          <select id="first-selection">
-                                            <option selected>Select Any Category</option>
-                                          </select>&nbsp;
-                                          <select id="second-selection">
-                                            <option selected>Select Any Sub Item</option>
-                                          </select>
-                                        </div>
-                                        <div class="field">
-                                          <table id="item-table" style="width: 100%;">
-                                            <thead>
-                                              <tr>
-                                                <th>Category</th>
-                                                <th>Item</th>
-                                                <th>Price</th>
-                                                <th>Quantity</th>
-                                              </tr>
-                                            </thead>
-                                            <tbody>
-                                              <tr id="1">
-                                                <td>
-                                                  <label id="first-text1"></label>
-                                                </td>
-                                                <td>
-                                                  <label id="second-text1"></label>
-                                                </td>
-                                                <td><label id="price-text1">0</label> <input type="hidden" value="" id="item-price1"></td>
-                                                <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
-                                              </tr>
-                                            </tbody>
-                                          </table>
-                                        </div>
-                                        <div class="field">
-                                          <button type="button" id="Btnadd">Add</button>&nbsp;
-                                          <button type="button" id="Btndelete">Delete</button>
-                                        </div>
-                                        <div class="field btns">
-                                          <button class="prev-1 prev">Previous</button>
-                                          <button class="next-1 next" id="nextbtn">Next</button>
-                                        </div>
-                                      </div>
-                            
-                                      <div class="page">
-                                        <div class="title">
-                                          <label><input type="checkbox" id="terms-and-condition">I read terms & condition</label>
-                                          <label><input type="checkbox" id="terms-and-condition">I read privacy terms</label>
-                                        </div>
-                                        <div class="field btns">
-                                          <button class="prev-2 prev">Previous</button>
-                                          <button class="submit" type="submit">Join the club</button>
-                                        </div>
-                                      </div>
                                     </form>
-                                  </div>
                                 </div>
-                              </div>
                             </div>
                         </div>
                     </div>
