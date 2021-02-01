@@ -240,130 +240,155 @@
             <section class="section contact">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h3 class="section-title">Join the club today, for free</h3>
-                            <!-- Contact Form -->
-                            <article id="form-section" >
-                                <div class="container col-md-offset-4">
-                                    <div class="progress-bar-multi">
-                                      <div class="step">
+                        <div class="col-md-6">
+                            <hgroup class="title-group">
+                                <h3 class="section-title">Join the club today, for free</h3>
+                            </hgroup>
+                            <div class="iconbox">
+                                <i class="icon icon-mail"></i>
+                                <div class="box">
+                                    <h4 class="title">Add your email</h4>
+                                    <p>Well, we need this to deliver the newsletter!</p>
+                                </div>
+                            </div>
+                            <div class="iconbox">
+                                <i class="icon icon-funnel"></i>
+                                <div class="box">
+                                    <h4 class="title">Add the funds</h4>
+                                    <p>These are the funds you want to monitor. We will not ask you how much you invested. Just make sure the portfolio reaches 100%.</p>
+                                </div>
+                            </div>
+                            <div class="iconbox">
+                                <i class="icon icon-folder"></i>
+                                <div class="box">
+                                    <h4 class="title">Done!</h4>
+                                    <p>We don't share your data and we take all the possible measure to secure them. But have a look at our terms and conditions and privacy terms.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" id="form-section">
+                            <div class="container">
+                                <div class="progress-bar-multi">
+                                    <div class="step">
                                         <p> User</p>
                                         <div class="bullet">
-                                          <span>1</span>
+                                            <span>1</span>
                                         </div>
                                         <div class="check fas fa-check"></div>
-                                      </div>
-                                      <div class="step">
+                                    </div>
+                                    <div class="step">
                                         <p>Funds</p>
                                         <div class="bullet">
-                                          <span>2</span>
+                                            <span>2</span>
                                         </div>
                                         <div class="check fas fa-check"></div>
-                                      </div>
-                                      <div class="step">
+                                    </div>
+                                    <div class="step">
                                         <p>Done</p>
                                         <div class="bullet">
-                                          <span>3</span>
+                                            <span>3</span>
                                         </div>
                                         <div class="check fas fa-check"></div>
-                                        </div>
                                     </div>
-                                    <div class="form-outer">
-                                      <form>
-                                        <div class="page slide-page">
-                                          <div class="title">Contact Info:</div>
-                                          <div class="field">
-                                            <div class="label">First Name</div>
-                                            <input type="text" id="first-name-text"><br/>
-                                            <span id="first-error"></span>
-                                          </div>
-                                          <div class="field">
-                                            <div class="label">Last Name</div>
-                                            <input type="text" id="last-name-text"><br/>
-                                            <span id="last-error"></span>
-                                          </div>
-                                          <div class="field">
-                                            <div class="label">Email Address</div>
-                                            <input type="text" id="email-text"><br/>
-                                            <span id="email-error"></span>
-                                          </div>
-                                          <div class="field">
-                                            <button class="firstNext next">Next</button>
-                                          </div>
+                                </div>
+                                <div class="form-outer">
+                                    <form>
+                                      <div class="page slide-page">
+                                        <div class="title">Contact Info:</div>
+                                        <div class="field">
+                                          <div class="label">First Name</div>
+                                          <input type="text" id="first-name-text"><br/>
+                                          <span id="first-error"></span>
                                         </div>
-                                        <div class="page">
-                                          <div class="title">Portfolio Info:</div>
-                                          <div class="field">
-                                            <span id="price-error"></span>
-                                            <span id="table-error"></span>
-                                          </div>
-                                          <div class="field">
-                                            <div class="label">Date</div>
-                                            <input type="date" id="date">
-                                            <span id="date-error"></span>
-                                          </div>
-                                          <div class="field">
-                                            <div class="label">Items</div>
-                                            <select id="first-selection">
-                                              <option selected>Select Any Category</option>
-                                            </select>&nbsp;
-                                            <select id="second-selection">
-                                              <option selected>Select Any Sub Item</option>
-                                            </select>
-                                          </div>
-                                          <div class="field">
-                                            <table id="item-table" style="width: 100%;">
-                                              <thead>
-                                                <tr>
-                                                  <th>Category</th>
-                                                  <th>Item</th>
-                                                  <th>Price</th>
-                                                  <th>Quantity</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr id="1">
-                                                  <td>
-                                                    <label id="first-text1"></label>
-                                                  </td>
-                                                  <td>
-                                                    <label id="second-text1"></label>
-                                                  </td>
-                                                  <td><label id="price-text1">0</label> <input type="hidden" value="" id="item-price1"></td>
-                                                  <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-                                          <div class="field">
-                                            <button type="button" id="Btnadd">Add</button>&nbsp;
-                                            <button type="button" id="Btndelete">Delete</button>
-                                          </div>
-                                          <div class="field btns">
-                                            <button class="prev-1 prev">Previous</button>
-                                            <button class="next-1 next" id="nextbtn">Next</button>
-                                          </div>
+                                        <div class="field">
+                                          <div class="label">Last Name</div>
+                                          <input type="text" id="last-name-text"><br/>
+                                          <span id="last-error"></span>
                                         </div>
-                              
-                                        <div class="page">
-                                          <div class="title">
-                                            <label><input type="checkbox" id="terms-and-condition">I read terms & condition</label>
-                                            <label><input type="checkbox" id="terms-and-condition">I read privacy terms</label>
-                                          </div>
-                                          <div class="field btns">
-                                            <button class="prev-2 prev">Previous</button>
-                                            <button class="submit" type="submit">Join the club</button>
-                                          </div>
+                                        <div class="field">
+                                          <div class="label">Email Address</div>
+                                          <input type="text" id="email-text"><br/>
+                                          <span id="email-error"></span>
                                         </div>
-                                      </form>
-                                    </div>
+                                        <div class="field">
+                                          <button class="firstNext next">Next</button>
+                                        </div>
+                                      </div>
+                                      <div class="page">
+                                        <div class="title">Portfolio Info:</div>
+                                        <div class="field">
+                                          <span id="price-error"></span>
+                                          <span id="table-error"></span>
+                                        </div>
+                                        <div class="field">
+                                          <div class="label">Date</div>
+                                          <input type="date" id="date">
+                                          <span id="date-error"></span>
+                                        </div>
+                                        <div class="field">
+                                          <div class="label">Items</div>
+                                          <select id="first-selection">
+                                            <option selected>Select Any Category</option>
+                                          </select>&nbsp;
+                                          <select id="second-selection">
+                                            <option selected>Select Any Sub Item</option>
+                                          </select>
+                                        </div>
+                                        <div class="field">
+                                          <table id="item-table" style="width: 100%;">
+                                            <thead>
+                                              <tr>
+                                                <th>Category</th>
+                                                <th>Item</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr id="1">
+                                                <td>
+                                                  <label id="first-text1"></label>
+                                                </td>
+                                                <td>
+                                                  <label id="second-text1"></label>
+                                                </td>
+                                                <td><label id="price-text1">0</label> <input type="hidden" value="" id="item-price1"></td>
+                                                <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                        <div class="field">
+                                          <button type="button" id="Btnadd">Add</button>&nbsp;
+                                          <button type="button" id="Btndelete">Delete</button>
+                                        </div>
+                                        <div class="field btns">
+                                          <button class="prev-1 prev">Previous</button>
+                                          <button class="next-1 next" id="nextbtn">Next</button>
+                                        </div>
+                                      </div>
+                            
+                                      <div class="page">
+                                        <div class="title">
+                                          <label><input type="checkbox" id="terms-and-condition">I read terms & condition</label>
+                                          <label><input type="checkbox" id="terms-and-condition">I read privacy terms</label>
+                                        </div>
+                                        <div class="field btns">
+                                          <button class="prev-2 prev">Previous</button>
+                                          <button class="submit" type="submit">Join the club</button>
+                                        </div>
+                                      </div>
+                                    </form>
                                   </div>
                                 </div>
-                            </article>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
 
         </main>
 
