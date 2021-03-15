@@ -318,22 +318,23 @@
                                       <div class="page">
                                           <div class="title">Portfolio Info:</div>
                                           <div class="field">
-                                              <span id="price-error"></span>
+                                              <span id="quantity-error"></span>
                                               <span id="table-error"></span>
                                           </div>
                                             <div class="field">
-                                                <div class="label">Items</div>
+                                                <div class="label">Funds</div>
                                                 <select id="first-selection">
-                                                    <option selected>Select Any Category</option>
+                                                    <option selected>Select Any Provider</option>
                                                 </select>&nbsp;
                                                 <select id="second-selection">
-                                                    <option selected>Select Any Sub Item</option>
+                                                    <option selected>Select Any Ticker</option>
                                                 </select>
                                             </div>
                                             <div class="field">
                                                 <table id="item-table" style="width: 100%;">
                                                     <thead>
                                                         <tr>
+                                                            <th>Provider</th>
                                                             <th>Ticker</th>
                                                             <th>Name</th>
                                                             <th>Quantity</th>
@@ -341,8 +342,9 @@
                                                     </thead>
                                                     <tbody>
                                                         <tr id="1">
-                                                            <td> <label id="ticker-text1"></label> </td>
-                                                            <td><label id="name-text1">full name</label> <input type="hidden" value="" id="item-name1"></td>
+                                                            <td> <label id="first-text1"></label> </td>
+                                                            <td> <label id="second-text1"></label> </td>
+                                                            <td><label id="quantity-text1">0</label> <input type="hidden" value="" id="item-quantity1"></td>
                                                             <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
                                                         </tr>
                                                     </tbody>
