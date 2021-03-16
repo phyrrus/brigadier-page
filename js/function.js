@@ -1,4 +1,4 @@
-var GBQuantiy = 0, GBCount = 1, ItemName = 0;
+var JsonPrice = 0, GBQuantiy = 0, GBCount = 1, ItemPrice = 0;
 $(document).ready(function(){
     firstSelectionDD();    
 });
@@ -7,7 +7,7 @@ $('#Btnadd').click(function(){
     AppendTable();
 });
 function firstSelectionDD(){
-    $.get('js/etf_provider_ticker.json',function(data){
+    $.get('js/food_categories.json',function(data){
         $.each(data,function(index, value){
             $('#first-selection').append('<option value="'+index+'">'+index+'</option>');
         });
@@ -16,78 +16,110 @@ function firstSelectionDD(){
 function AppendTable(){
     var htmlcode = '<tr id="'+GBCount+'">';
     htmlcode += '<td>';
-    htmlcode += '<label id="first-text-provider'+GBCount+'"></label>';
+    htmlcode += '<label id="first-text'+GBCount+'"></label>';
     htmlcode += '</td>';
     htmlcode += '<td>';
-    htmlcode += '<label id="second-text-ticker'+GBCount+'"></label>';
+    htmlcode += '<label id="second-text'+GBCount+'"></label>';
     htmlcode +=  '</td>';
-    htmlcode += '<td><label id="second-text-fundname'+GBCount+'"></label><input type="hidden" value="'+ItemName+'" id="item-fundname'+GBCount+'"></td>';
+    htmlcode += '<td><label id="price-text'+GBCount+'">0</label><input type="hidden" value="'+ItemPrice+'" id="item-price'+GBCount+'"></td>';
     htmlcode += '<td><input type="text" id="quantity'+GBCount+'" style="width:57px" sub-id="'+GBCount+'" onchange="ChangeDynamic(this)"></td>'; 
     htmlcode += '</tr>'; 
     $('#item-table tbody').append(htmlcode);
 }
 $(document).on('change', '#first-selection', function(){
     var dropdown = $(this);
-    $.getJSON('js/etf_provider_ticker.json',function(data){
+    $.getJSON('js/food_categories.json',function(data){
         var key = dropdown.val();
         var vals = [];
         switch(key){
-            case 'Vanguard':
-                vals = data.Vanguard.split(',');
+            case 'Beverages':
+                vals = data.Beverages.split(',');
+                break;
+            case 'Snacks':
+                vals = data.Snacks.split(',');
+                break;
+            case 'Pizza':
+                vals = data.Pizza.split(',');
+                break;
+            case 'Burgers':
+                vals = data.Burgers.split(',');
                 break;
         }
         var secondSelection  = $('#second-selection');
         secondSelection.empty();
-        secondSelection.append('<option>Select Any Ticker</option>');
+        secondSelection.append('<option>Select Any Sub Item</option>');
         $.each(vals, function(index,value){
             secondSelection.append('<option value="'+value+'">'+value+'</option>');
         });
     });
 });
 $(document).on('change', '#second-selection',function(){
-    $.getJSON('js/etf_ticker_fundname.json',function(data){
+    $.getJSON('js/food_prices.json',function(data){
         var key = $('#second-selection').val();
         var vals = '';
         switch(key){
-            case 'VAGP.L':
-                vals = data.VAGP.L;
-                JsonName = vals;
+            case 'Coffee':
+                vals = data.Coffee;
+                JsonPrice = vals;
+                break;
+            case 'Coke':
+                vals = data.Coke;
+                JsonPrice = vals;
+                break;
+            case 'Chips':
+                vals = data.Chips;
+                JsonPrice = vals;
+                break;
+            case 'Cookies':
+                vals = data.Cookies;
+                JsonPrice = vals;
+                break;
+            case 'Margherita':
+                vals = data.Margherita;
+                JsonPrice = vals;
+                break;
+            case 'Salami':
+                vals = data.Salami;
+                JsonPrice = vals;
+                break;
+            case 'Chicken':
+                vals = data.Chicken;
+                JsonPrice = vals;
+                break;
+            case 'Beef':
+                vals = data.Beef;
+                JsonPrice = vals;
                 break;
         }
-        ItemName = JsonName;
-        $('#quantity-text'+GBCount).text(JsonName);
-        $('#item-quantity'+GBCount).val(JsonName);
+        ItemPrice = JsonPrice;
+        $('#price-text'+GBCount).text(JsonPrice);
+        $('#item-price'+GBCount).val(JsonPrice);
     });
     $('#first-text'+GBCount).text($('#first-selection').val());
     $('#second-text'+GBCount).text($('#second-selection').val());
 });
-
-function CheckQuantity(){
-    var Quantity = 0, Sum = 0;
+function CheckPrice(){
+    var Price = 0, Sum = 0;
     for(i = 0; i < GBCount; i++){
-        Quantity = parseInt($('#quantity-text'+GBCount).text());
-        Sum += Quantity;
+        Price = parseInt($('#price-text'+GBCount).text());
+        Sum += Price;
     }
-    if(Sum > 100){
+    if(Sum > 20){
         $('#nextbtn').attr('disabled',true);
-        $('#quantity-error').html('<span style="color:red">The total percentage must be 100%</span>');
-    }else if(Sum < 100){
-        $('#nextbtn').attr('disabled',true);
-        $('#quantity-error').html('<span style="color:red">The total percentage must be 100%</span>');
+        $('#price-error').html('<span style="color:red">Price Must be less then 20</span>');
     }else{
         $('#nextbtn').attr('disabled',false);
-        $('#quantity-error').html('');
+        $('#price-error').html('');
     }
 }
-
 function ChangeDynamic(prmQuantity){
     var ItemPicetext = 0;
     var ID  = parseInt($('#quantity'+GBCount).attr('sub-id'));
     GBQuantiy = parseInt(prmQuantity.value);
     if(ID === GBCount){
-        ItemPicetext = parseInt($('#item-quantity'+GBCount).val());
-        $('#quantity-text'+GBCount).text(ItemPicetext * GBQuantiy);  
-        CheckQuantity();
+        ItemPicetext = parseInt($('#item-price'+GBCount).val());
+        $('#price-text'+GBCount).text(ItemPicetext * GBQuantiy);  
+        CheckPrice();
     }else{
         console.log('error');
     }
@@ -97,7 +129,7 @@ $('#Btndelete').click(function(){
     if(TotalRows > 1){
         $('#item-table tbody tr#'+GBCount).remove();
         GBCount -= 1;
-        CheckQuantity();
+        CheckPrice();
     }else{
         console.log('error');
     }
