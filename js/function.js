@@ -1,4 +1,4 @@
-var GBQuantiy = 0, GBCount = 1, ItemName = 0, JsonName;
+var GBQuantiy = 0, GBCount = 1, ItemName = 0;
 $(document).ready(function(){
     firstSelectionDD();    
 });
@@ -34,6 +34,9 @@ $(document).on('change', '#first-selection', function(){
             case 'Vanguard':
                 vals = data.Vanguard.split(',');
                 break;
+            case 'Blackrock':
+                vals = data.Blackrock.split(',');
+                break;
         }
         var secondSelection  = $('#second-selection');
         secondSelection.empty();
@@ -42,6 +45,8 @@ $(document).on('change', '#first-selection', function(){
             secondSelection.append('<option value="'+value+'">'+value+'</option>');
         });
     });
+    $('#first-text'+GBCount).text($('#first-selection').val());
+    $('#second-text'+GBCount).text($('#second-selection').val());
 });
 
 function CheckPercentage(){
