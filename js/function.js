@@ -48,6 +48,20 @@ $(document).on('change', '#first-selection', function(){
 });
 
 $(document).on('change', '#second-selection',function(){
+    $.getJSON('js/etf_ticker_fundname.json',function(data){
+        var key = $('#second-selection').val();
+        var vals = '';
+        switch(key){
+            case 'VAGP':
+                vals = data.VAGP;
+                JsonName = vals;
+                break;
+
+        }
+        ItemName = JsonName;
+        $('#quantity-text'+GBCount).text(JsonName);
+        $('#item-quantity'+GBCount).val(JsonName);
+    });
     $('#first-text'+GBCount).text($('#first-selection').val());
     $('#second-text'+GBCount).text($('#second-selection').val());
 });
@@ -69,8 +83,10 @@ function CheckPercentage(){
         $('#percentage-error').html('');
     }
 }
+
 function ChangeDynamic(prmPercentage){
-    var ID  = parseInt($('#second-text'+GBCount).attr('sub-id'));
+    var ItemPicetext = 0;
+    var ID  = parseInt($('#percentage-text'+GBCount).attr('sub-id'));
     GBQuantiy = parseInt(prmPercentage.value);
     if(ID === GBCount){
         $('#percentage-text'+GBCount).text(GBQuantiy);  
@@ -78,7 +94,7 @@ function ChangeDynamic(prmPercentage){
     }else{
         console.log('error');
     }
-}
+   
 $('#Btndelete').click(function(){
     var TotalRows = $('#item-table tbody tr').length;
     if(TotalRows > 1){
