@@ -48,20 +48,6 @@ $(document).on('change', '#first-selection', function(){
 });
 
 $(document).on('change', '#second-selection',function(){
-    $.getJSON('js/etf_ticker_fundname.json',function(data){
-        var key = $('#second-selection').val();
-        var vals = '';
-        switch(key){
-            case 'VAGP':
-                vals = data.VAGP;
-                JsonName = vals;
-                break;
-
-        }
-        ItemName = JsonName;
-        $('#quantity-text'+GBCount).text(JsonName);
-        $('#item-quantity'+GBCount).val(JsonName);
-    });
     $('#first-text'+GBCount).text($('#first-selection').val());
     $('#second-text'+GBCount).text($('#second-selection').val());
 });
