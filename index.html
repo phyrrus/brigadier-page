@@ -16,13 +16,13 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/slick.css">
         <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/form_style.css">
         <link rel="stylesheet" href="css/main.css">
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
         <link rel="icon" type="image/png" href="img/favicon.png">
 
-        <link rel="stylesheet" href="css/form_style.css">
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <script src="js/vendor/modernizr.js"></script>
@@ -36,6 +36,7 @@
                 <div class="loader"></div>
             </div>
         </div>
+        <!-- End Preloader  -->
 
         <!-- Navbar -->
         <nav class="navbar navbar-burger navbar-fixed-top is-transparent" role="navigation">
@@ -54,6 +55,7 @@
                 </div>
             </div>
         </nav>
+        <!-- End Navbar  -->
 
         <!-- Header -->
         <header class="header hero flex flex-middle flex-center" role="banner">
@@ -72,6 +74,7 @@
                 </div>
             </div>
         </header>
+        <!-- End Header  -->
         
         <!-- Content -->
         <main class="main" role="main">
@@ -110,6 +113,7 @@
                     </div>
                 </div>
             </section>
+            <!-- End Features  -->
 
             <!-- Fun Facts / Counters -->
             <section class="section counters">
@@ -136,6 +140,7 @@
                     </div>
                 </div>
             </section>
+            <!-- End Counter  -->
 
             <!-- Features / Mockup -->
             <section class="section text-center">
@@ -219,13 +224,14 @@
                     </div>
                 </div>
             </section>
+            <!-- End Features -->
             
             <!-- Call To Action -->
             <section class="section get-started">
                 <div class="container">
                     <div class="row">
                         <article class="call-to flex flex-middle">
-                            <div class="col-md-6 col-md-offset-2">
+                            <div class="col-md-6 col-md-offset-2 borhar_responsive">
                                 <h3 class="title">Questions or suggestions?</h3>
                                 <p>If your fund is missing, you have suggestions about how we should improve the newsletter, or you simply want to ask us something, drop us an email! </p>
                             </div>
@@ -236,10 +242,13 @@
                     </div>
                 </div>
             </section>
+            <!-- End Call to Action  -->
 
+            <!-- Contact Us Wrap  -->
             <section class="section contact">
                 <div class="container">
                     <div class="row">
+                        <!-- Contact Left Content  -->
                         <div class="col-md-6">
                             <hgroup class="title-group">
                                 <h3 class="section-title">Join the club today, for free</h3>
@@ -266,9 +275,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- End Contact Left  -->
 
+                        <!-- Contact Form Wrap  -->
                         <div class="col-md-6" id="form-section">
                             <div class="container">
+                                <!-- Progressbar Wrap  -->
                                 <div class="progress-bar-multi">
                                     <div class="step">
                                         <p> User</p>
@@ -292,8 +304,12 @@
                                         <div class="check fas fa-check"></div>
                                     </div>
                                 </div>
+                                <!-- End Progress bar  -->
+
+                                <!-- Form Content Wrap  -->
                                 <div class="form-outer">
                                     <form>
+                                        <!-- Field One  -->
                                         <div class="page slide-page">
                                             <div class="title">Contact Info:</div>
                                             <div class="field">
@@ -315,41 +331,38 @@
                                                 <button class="firstNext next">Next</button>
                                             </div>
                                       </div>
+                                      <!-- End  -->
+                                      <!-- Field Two  -->
                                       <div class="page">
                                           <div class="title">Portfolio Info:</div>
                                           <div class="field">
-                                              <span id="price-error"></span>
+                                              <span id="quantity-error"></span>
                                               <span id="table-error"></span>
-                                            </div>
+                                          </div>
                                             <div class="field">
-                                                <div class="label">Date</div>
-                                                <input type="date" id="date">
-                                                <span id="date-error"></span>
-                                            </div>
-                                            <div class="field">
-                                                <div class="label">Items</div>
+                                                <div class="label">Funds</div>
                                                 <select id="first-selection">
-                                                    <option selected>Select Any Category</option>
+                                                    <option selected>Select Any Provider</option>
                                                 </select>&nbsp;
                                                 <select id="second-selection">
-                                                    <option selected>Select Any Sub Item</option>
+                                                    <option selected>Select Any Ticker</option>
                                                 </select>
                                             </div>
                                             <div class="field">
                                                 <table id="item-table" style="width: 100%;">
                                                     <thead>
                                                         <tr>
-                                                            <th>Category</th>
-                                                            <th>Item</th>
-                                                            <th>Price</th>
-                                                            <th>Quantity</th>
+                                                            <th>Provider</th>
+                                                            <th>Ticker</th>
+                                                            <th>Name</th>
+                                                            <th>Percentage of the portfolio</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr id="1">
                                                             <td> <label id="first-text1"></label> </td>
                                                             <td> <label id="second-text1"></label> </td>
-                                                            <td><label id="price-text1">0</label> <input type="hidden" value="" id="item-price1"></td>
+                                                            <td><label id="quantity-text1"></label> <input type="hidden" value="" id="item-quantity1"></td>
                                                             <td><input type="text" id="quantity1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
                                                         </tr>
                                                     </tbody>
@@ -364,6 +377,8 @@
                                                 <button class="next-1 next" id="nextbtn">Next</button>
                                             </div>
                                         </div>
+                                        <!-- End  -->
+                                        <!-- Field Three  -->
                                         <div class="page">
                                             <div class="title">
                                                 <label><input type="checkbox" id="terms-and-condition">I read terms & condition</label>
@@ -374,22 +389,26 @@
                                                 <button class="submit" type="submit">Join the club</button>
                                             </div>
                                         </div>
+                                        <!-- End  -->
                                     </form>
                                 </div>
+                                <!-- End Contact  -->
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!-- End Contact  -->
 
         </main>
+        <!-- End Main  -->
 
         <!-- Footer -->
         <footer class="footer" role="contentinfo">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                        <!-- Footer Nav  -->
                         <nav class="foter-navbar" role="navigation">
                             <ul class="footer-nav" role="menubar">
                                 <li><a href="https://uk.linkedin.com/in/andreapirrone">About</a></li>
@@ -398,12 +417,13 @@
                                 <li><a href="privacy.html">Privacy</a></li>
                             </ul>
                         </nav>
+                        <!-- End  -->
                         <p class="copyright"> &copy; <time datetime="2021">2021</time> Brigadier. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
         </footer>
-        
+        <!-- End Footer  -->
         <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

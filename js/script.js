@@ -33,10 +33,10 @@ nextBtnFirst.addEventListener("click", function(event){
   }
 });
 nextBtnSec.addEventListener("click", function(event){
-  if(document.getElementById('date').value === ''){
-    $('#date-error').html('<span style="color:red">This Field is Required</span>');
-  }else{
-    $('#date-error').html('');
+  // if(document.getElementById('date').value === ''){
+  //   $('#date-error').html('<span style="color:red">This Field is Required</span>');
+  // }else{
+    // $('#date-error').html('');
     if($('#item-table tbody tr').length < 1){
       $('#table-error').html('<span style="color:Red">Select at least one Item</span>');
     }else{
@@ -53,7 +53,7 @@ nextBtnSec.addEventListener("click", function(event){
 
       }  */ 
     }
-  }
+  // }
 
 });
 
