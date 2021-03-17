@@ -21,7 +21,6 @@ function AppendTable(){
     htmlcode += '<td>';
     htmlcode += '<label id="second-text'+GBCount+'"></label>';
     htmlcode +=  '</td>';
-    htmlcode += '<td><label id="quantity-text'+GBCount+'"></label><input type="hidden" value="'+ItemName+'" id="item-quantity'+GBCount+'"></td>';
     htmlcode += '<td><input type="text" id="quantity'+GBCount+'" style="width:57px" sub-id="'+GBCount+'" onchange="ChangeDynamic(this)"></td>'; 
     htmlcode += '</tr>'; 
     $('#item-table tbody').append(htmlcode);
@@ -80,12 +79,12 @@ function CheckQuantity(){
     }
 }
 function ChangeDynamic(prmQuantity){
-    var ItemPicetext = 0;
+    var ItemQuantitytext = 0;
     var ID  = parseInt($('#quantity'+ GBCount).attr('sub-id'));
     GBQuantiy = parseInt(prmQuantity.value);
     if(ID === GBCount){
-        ItemPicetext = parseInt($('#item-quantity'+ GBCount).val());
-        $('#quantity-text'+GBCount).text(ItemPicetext * GBQuantiy);  
+        ItemQuantitytext = parseInt($('#item-quantity'+ GBCount).val());
+        $('#quantity-text'+GBCount).text(ItemQuantitytext * GBQuantiy);  
         CheckQuantity();
     }else{
         console.log('error');
