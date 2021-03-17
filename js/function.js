@@ -94,7 +94,8 @@ function ChangeDynamic(prmPercentage){
     }else{
         console.log('error');
     }
-   
+}
+
 $('#Btndelete').click(function(){
     var TotalRows = $('#item-table tbody tr').length;
     if(TotalRows > 1){
