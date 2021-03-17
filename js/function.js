@@ -21,7 +21,7 @@ function AppendTable(){
     htmlcode += '<td>';
     htmlcode += '<label id="second-text'+GBCount+'"></label>';
     htmlcode +=  '</td>';
-    htmlcode += '<td><input type="text" id="quantity'+GBCount+'" style="width:57px" sub-id="'+GBCount+'" onchange="ChangeDynamic(this)"></td>'; 
+    htmlcode += '<td><input id="percentage-text'+GBCount+'" style="width:57px" sub-id="'+GBCount+'" onchange="ChangeDynamic(this)"></td>'; 
     htmlcode += '</tr>'; 
     $('#item-table tbody').append(htmlcode);
 }
@@ -43,49 +43,31 @@ $(document).on('change', '#first-selection', function(){
         });
     });
 });
-$(document).on('change', '#second-selection',function(){
-    $.getJSON('js/etf_ticker_fundname.json',function(data){
-        var key = $('#second-selection').val();
-        var vals = '';
-        switch(key){
-            case 'VAGP':
-                vals = data.VAGP;
-                JsonName = vals;
-                break;
-            
-        }
-        ItemName = JsonName;
-        $('#quantity-text'+GBCount).text(JsonName);
-        $('#item-quantity'+GBCount).val(JsonName);
-    });
-    $('#first-text'+GBCount).text($('#first-selection').val());
-    $('#second-text'+GBCount).text($('#second-selection').val());
-});
-function CheckQuantity(){
-    var Quantity = 0, Sum = 0;
+
+function CheckPercentage(){
+    var Percentage = 0, Sum = 0;
     for(i = 0; i < GBCount; i++){
-        Quantity = parseInt($('#quantity-text'+ GBCount).text());
-        Sum += Quantity;
+        Percentage = parseInt($('#percentage-text'+ GBCount).text());
+        Sum += Percentage;
     }
     if(Sum > 100){
         $('#nextbtn').attr('disabled',true);
-        $('#quantity-error').html('<span style="color:red">The total percentage must be 100%</span>');
+        $('#percentage-error').html('<span style="color:red">The total percentage must be 100%</span>');
     }else if(Sum < 100){
         $('#nextbtn').attr('disabled',true);
-        $('#quantity-error').html('<span style="color:red">The total percentage must be 100%</span>');
+        $('#percentage-error').html('<span style="color:red">The total percentage must be 100%</span>');
     }else{
         $('#nextbtn').attr('disabled',false);
-        $('#quantity-error').html('');
+        $('#percentage-error').html('');
     }
 }
-function ChangeDynamic(prmQuantity){
-    var ItemQuantitytext = 0;
-    var ID  = parseInt($('#quantity'+ GBCount).attr('sub-id'));
-    GBQuantiy = parseInt(prmQuantity.value);
+function ChangeDynamic(prmPercentage){
+    var ItemPicetext = 0;
+    var ID  = parseInt($('#percentage-text'+GBCount).attr('sub-id'));
+    GBQuantiy = parseInt(prmPercentage.value);
     if(ID === GBCount){
-        ItemQuantitytext = parseInt($('#item-quantity'+ GBCount).val());
-        $('#quantity-text'+GBCount).text(ItemQuantitytext * GBQuantiy);  
-        CheckQuantity();
+        $('#percentage-text'+GBCount).text(GBQuantiy);  
+        CheckPercentage();
     }else{
         console.log('error');
     }
@@ -95,7 +77,7 @@ $('#Btndelete').click(function(){
     if(TotalRows > 1){
         $('#item-table tbody tr#'+GBCount).remove();
         GBCount -= 1;
-        CheckQuantity();
+        CheckPercentage();
     }else{
         console.log('error');
     }
