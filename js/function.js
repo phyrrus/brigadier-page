@@ -5,7 +5,8 @@ $(document).ready(function(){
     firstSelectionDD();    
 });
 
-$("#user-data-form").submit(function(){
+$("form").on('submit', function (event) {
+    event.preventDefault();
     const firstName = $("#first-name-text").val();
     const lastName = $("#last-name-text").val();
     const email = $("#email-text").val();
