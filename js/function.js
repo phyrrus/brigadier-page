@@ -9,18 +9,17 @@ $("#user-data-form").submit(function(){
     const firstName = $("#first-name-text").val();
     const lastName = $("#last-name-text").val();
     const email = $("#email-text").val();
-    //var portfolio = {};
-    //var table = document.getElementById("item-table");
-    //var r=0; //start counting rows in table
-    //while(row=table.rows[r++])
-    //{
-    //portfolio[$('#second-text'+GBCount).val()] = $('#percentage-text'+GBCount).val()
-    //}
+    var portfolio = {};
+    var table = document.getElementById("item-table");
+    var r=0; //start counting rows in table
+    while(row=table.rows[r++]){
+        portfolio[$('#second-text'+GBCount).val()] = $('#percentage-text'+GBCount).val()
+    }
     var data = {
         firstName,
         lastName,
         email,
-       // portfolio
+        portfolio
     };
     $.ajax({
         type: "POST",
