@@ -11,12 +11,12 @@ $("form").on('submit', function (event) {
     const lastName = $("#last-name-text").val();
     const email = $("#email-text").val();
     var portfolio = {};
-    var portfolio= document.getElementById("item-table");
-    //var r=0; //start counting rows in table
-    //while(row=table.rows[r++]){
-
-        //portfolio[$('#second-text'+GBCount).val()] = $('#percentage-text'+GBCount).val()
-    //}
+    var table = document.getElementById("item-table");
+    for (var i = 1; i < table.rows.length; i++) {
+        if (table.rows[i].cells.length) {
+            portfolio[table.rows[i].cells[1].textContent.trim()] = table.rows[i].cells[2].textContent.trim()
+        }
+    }
     var data = {
         firstName,
         lastName,
