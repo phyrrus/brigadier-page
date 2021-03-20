@@ -27,7 +27,7 @@ $("form").on('submit', function (event) {
         url: url,
         data: JSON.stringify(data),
     });
-    alert('Done! You are registered!')
+    alert('Done! Thank you for registering!')
 });
 
 
