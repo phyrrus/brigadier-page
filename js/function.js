@@ -12,7 +12,7 @@ $("form").on('submit', function (event) {
     const email = $("#email-text").val();
     var portfolio = {};
     var table = document.getElementById("item-table");
-    for(var i=0; i<table.rows.length;i++)
+    for(var i=1; i<table.rows.length;i++)
     {
         portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
     }
