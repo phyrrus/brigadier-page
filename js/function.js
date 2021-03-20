@@ -5,8 +5,7 @@ $(document).ready(function(){
     firstSelectionDD();    
 });
 
-$("form").on('submit', function (event) {
-    event.preventDefault();
+$("#user-data-form").submit(function(){
     const firstName = $("#first-name-text").val();
     const lastName = $("#last-name-text").val();
     const email = $("#email-text").val();
@@ -20,14 +19,12 @@ $("form").on('submit', function (event) {
     var data = {
         firstName,
         lastName,
-        email,
+        email
        // portfolio
     };
-
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: JSON.stringify(data),
+    fetch(url, {
+          method: "POST",
+          body: JSON.stringify(data),
     });
 });
 
