@@ -19,12 +19,13 @@ $("#user-data-form").submit(function(){
     var data = {
         firstName,
         lastName,
-        email
+        email,
        // portfolio
     };
-    fetch(url, {
-          method: "POST",
-          body: JSON.stringify(data),
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: JSON.stringify(data),
     });
 });
 
