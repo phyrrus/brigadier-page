@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 $(function() {
-    $("#user-data-form").submit(function(){
+    $( "#user-data-form")[0].submit(function(){
         const firstName = $("#first-name-text").val();
         const lastName = $("#last-name-text").val();
         const email = $("#email-text").val();
