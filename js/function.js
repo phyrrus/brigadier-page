@@ -3,8 +3,8 @@ $(document).ready(function(){
     firstSelectionDD();    
 });
 
-$(function() {
-    $( "#user-data-form")[0].submit(function(){
+function submitDetailsForm() {
+    $("#user-data-form").submit(function(){
         const firstName = $("#first-name-text").val();
         const lastName = $("#last-name-text").val();
         const email = $("#email-text").val();
@@ -13,7 +13,7 @@ $(function() {
         var r=0; //start counting rows in table
         while(row=table.rows[r++])
         {
-            portfolio[$('#second-text'+GBCount).val()] = $('#percentage-text'+GBCount).val()
+        portfolio[$('#second-text'+GBCount).val()] = $('#percentage-text'+GBCount).val()
         }
         const payload = {
             firstName,
@@ -22,19 +22,13 @@ $(function() {
             portfolio
         };
         // update this url after deploying function to azure 
-        fetch("https://brigadier-backend-functions.azurewebsites.net/api/form_to_userdb?", {
+        return fetch("https://brigadier-backend-functions.azurewebsites.net/api/form_to_userdb?", {
             method: "post",
-            body: JSON.stringify(payload),
+            body: JSON.stringify(payload)
         })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            alert("Request submitted ...");
-            console.log(data);
-        });
     });
-});
+}
+
 $('#Btnadd').click(function(){
     debugger;
     Provider = $('#first-selection').find(":selected").text();
