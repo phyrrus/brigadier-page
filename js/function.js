@@ -5,18 +5,12 @@ $(document).ready(function(){
         const firstName = $("#first-name-text").val();
         const lastName = $("#last-name-text").val();
         const email = $("#email-text").val();
+        //var portfolio = document.getElementById('item-table').childNodes;
         const payload = {
             firstName,
             lastName,
-            email,
-            portfolio: [
-                {
-                    key: "value1"
-                },
-                {
-                    key: "value2"
-                }
-            ]
+            email//,
+            //portfolio
         };
         // Please update this url after deploying this functiont to azure with azure function url 
         fetch("https://brigadier-backend-functions.azurewebsites.net/api/form_to_userdb?", {
