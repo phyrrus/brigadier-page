@@ -1,8 +1,11 @@
-var GBQuantiy = 0, GBCount = 1;
+var GBQuantiy = 0, GBCount = 1, Provider = '', Ticker = ''; 
 $(document).ready(function(){
     firstSelectionDD();    
 });
 $('#Btnadd').click(function(){
+    debugger;
+    Provider = $('#first-selection').find(":selected").text();
+    Ticker = $('#second-selection').find(":selected").text();
     GBCount += 1;
     AppendTable();
 });
@@ -16,12 +19,12 @@ function firstSelectionDD(){
 function AppendTable(){
     var htmlcode = '<tr id="'+GBCount+'">';
     htmlcode += '<td>';
-    htmlcode += '<label id="first-text'+GBCount+'"></label>';
+    htmlcode += '<label id="first-text'+GBCount+'">'+ Provider +'</label>';
     htmlcode += '</td>';
     htmlcode += '<td>';
-    htmlcode += '<label id="second-text'+GBCount+'></label>';
+    htmlcode += '<label id="second-text'+GBCount+'">'+ Ticker +'</label>';
     htmlcode +=  '</td>';
-    htmlcode += '<td><input id="percentage-text'+GBCount+'" "sub-id="'+GBCount+'" style="width:57px" onchange="ChangeDynamic(this)"></td>'; 
+    htmlcode += '<td><input id="percentage-text'+GBCount+'" sub-id="'+GBCount+'" style="width:57px" onchange="ChangeDynamic(this)"> </td>'; 
     htmlcode += '</tr>'; 
     $('#item-table tbody').append(htmlcode);
 }
@@ -53,9 +56,10 @@ $(document).on('change', '#second-selection',function(){
 });
 
 function CheckPercentage(){
+    debugger;
     var Percentage = 0, Sum = 0;
     for(i = 0; i < GBCount; i++){
-        Percentage = parseInt($('#percentage-text'+ GBCount).text());
+        Percentage = parseInt($('#percentage-text'+ (i+1)).val());
         Sum += Percentage;
     }
     if(Sum > 100){
@@ -71,6 +75,7 @@ function CheckPercentage(){
 }
 
 function ChangeDynamic(prmPercentage){
+    debugger;
     var ID  = parseInt($('#percentage-text'+GBCount).attr('sub-id'));
     GBQuantiy = parseInt(prmPercentage.value);
     if(ID === GBCount){
