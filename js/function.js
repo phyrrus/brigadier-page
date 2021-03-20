@@ -2,7 +2,7 @@ var GBQuantiy = 0, GBCount = 1, Provider = '', Ticker = '';
 $(document).ready(function(){
     firstSelectionDD();    
 });
-$("#user-data-form").on('submit',function(){
+$("#user-data-form")[0].submit(function(){
     const firstName = $("#first-name-text").val();
     const lastName = $("#last-name-text").val();
     const email = $("#email-text").val();
