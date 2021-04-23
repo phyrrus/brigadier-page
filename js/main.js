@@ -1,9 +1,4 @@
-/*!
- * Hansen v1.0.0
- * Copyright 2015, Filip Greksa
- * www.filipgreksa.com
- * 2015/10/24
- */
+
 
 /*global $, jQuery*/
 // -----------------------------
