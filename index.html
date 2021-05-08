@@ -1,427 +1,192 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width-device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Brigadier</title>
-        <meta name="description" content="Brigadier Newsletter">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- FONTS -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Dosis:300,400,700,800' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/entypo.css">
-        
-        <!-- CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/slick.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/form_style.css">
-        <link rel="stylesheet" href="css/main.css">
-
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" href="img/apple-touch-icon.png">
-
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <script src="js/vendor/modernizr.js"></script>
-
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/fav.ico">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style type="text/css">
+            @font-face{
+              font-family: Plantin;
+              src:local("Plantin MT Std"),url(https://monocle.com/workspace/assets/fonts/Plantin.woff2) format("woff2");
+              font-weight:400;
+              font-style:normal
+              }
+        </style>
     </head>
+
     <body>
 
-        <!-- Preloader -->
-        <div class="preloader flex flex-middle flex-center">
-            <div class="wrapper">
-                <div class="loader"></div>
+    <header id="home">
+        <div class="container-fluid header-content">
+          <div class="row">
+            <div class="col">
+              <div class="content-box text-left">
+                <h2>Unlike any other <span style="color:#f39f0a;">newsletter</span></h2>
+                <p> The free email unraveling how the world affects your investments</p>
+                <a href="#" class="btn">Contact us</a>
+                <a href="#" class="btn">Get  it</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- Stats -->
+
+    <section class="about r-p" id="about">
+ 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+            <h3 class="">Financial News <span style="color:#f39f0a;">That Matter</span></h3>
+        </div>
+        <div class="col-md-6">
+          <!-- <h2 class="">About Me</h2>
+          <h4 class="">Hola! <span style="color:#f39f0a;">I'M John Doe</span></h4>-->
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, aspernatur.</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nesciunt dolores at possimus, sit.</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque earum adipisci soluta deserunt. Provident, vel!</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis accusamus sunt eaque maiores officia quibusdam qui facilis perferendis quae nihil  qui facilis perferendis quae nihil quam. qui facilis perferendis quae nihil quam.quam.</p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, aspernatur.</p>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem nesciunt dolores at possimus, sit.</p>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque earum adipisci soluta deserunt. Provident, vel!</p>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis accusamus sunt eaque maiores officia quibusdam qui facilis perferendis quae nihil  qui facilis perferendis quae nihil quam. qui facilis perferendis quae nihil quam.quam.</p>
+            </div>
+            <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
+                <h3 class="">Years of research <span style="color:#f39f0a;"> In Your Mailbox</span></h3>
+            </div>
+          </div>
+        </div>
+        </section>
+
+    <!-- Services -->
+    <section class="services bg-sec r-p " id="services">
+        <div class="container text-center">
+        <div class="row">
+            <div class="col mb-5 way-fade-right ">
+            <div class="col">
+                <h2>What's behind</h2>
+                <p>(and why you need it)</p>
+            </div>
             </div>
         </div>
-        <!-- End Preloader  -->
-
-        <!-- Navbar -->
-        <nav class="navbar navbar-burger navbar-fixed-top is-transparent" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Brigadier</a>
+        <!-- cards -->
+        <div class="row text-center way-fade-up">
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="fab fa-apple"></i>
                 </div>
-                <div class="menu-wrapper">
-                    <div class="overlay-menu flex flex-middle">
-                        <ul class="navigation" role="menubar">
-                            <li role="menuitem"><a href="index.html">Home</a></li>
-                            <li role="menuitem"><a href="about.html">About</a></li>
-                        </ul>
-                    </div>
+
+                <div class="card-body">
+                <h5 class="card-title">App Development</h5>
+                <div class="service-border"></div>
+                <p class="card-text">Having a mobile app for the business has become a must in today’s world. We build hybrid mobile apps that run across Android, iOS, windows.</p>
+
                 </div>
             </div>
-        </nav>
-        <!-- End Navbar  -->
+            </div>
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="fab fa-opencart"></i>
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">E-Commerce Solutions</h5>
+                <div class="service-border"></div>
+                <p class="card-text">Ecommerce Web Development. E-commerce web development is developing a website with online payment gateway system. </p>
 
-        <!-- Header -->
-        <header class="header hero flex flex-middle flex-center" role="banner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <hgroup class="title-group">
-                            <h1 class="bigtitle">Unlike any other newsletter</h1>
-                            <h4>Get the free weekly email that unravels how the world affects your investments</h4>
-                        </hgroup>
-                        <div class="btn-duo">
-                            <a href="#form-section" class="btn btn-info rounded">Register Now</a>
-                            <a href="mailto:support@brigadier.club" class="btn btn-default rounded">Contact us </a>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </header>
-        <!-- End Header  -->
-        
-        <!-- Content -->
-        <main class="main" role="main">
-
-            <!-- Features -->
-            <section class="section text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <hgroup class="title-group">
-                                <h3 class="section-title">Financial news that matter</h3>
-                                <h5 class="subtitle">  You don't need a PhD in finance to understand what events influenced the performance of your investments.</h5>
-                            </hgroup>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="feature">
-                                <i class="icon icon-paper-plane"></i>
-                                <h4 class="title">Simple</h4>
-                                <p>Add your email, add a portfolio, and let our A.I. do the hard work for you.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="feature">
-                                <i class="icon icon-rocket"></i>
-                                <h4 class="title">Powerful</h4>
-                                <p>Our machine learning models analyse your portfolio and identify which events influenced its performance.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="feature">
-                                <i class="icon icon-shield"></i>
-                                <h4 class="title">Secure</h4>
-                                <p>We don't share your data with anyone. We only use it to deliver the newsletter.</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="fas fa-desktop"></i>
                 </div>
-            </section>
-            <!-- End Features  -->
+                <div class="card-body">
+                <h5 class="card-title">Website Development</h5>
+                <div class="service-border"></div>
+                <p class="card-text">Website design and development is the most important and first step in online branding and customer acquizition. It creates value and trust.</p>
 
-            <!-- Fun Facts / Counters -->
-            <section class="section counters">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 col-md-4">
-                            <div class="numbers">
-                                <span class="number" data-from="0" data-to="78" data-speed="5000" data-refresh-interval="50"></span>
-                                <span class="number-info">ETF funds supported</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4">
-                            <div class="numbers">
-                                <span class="number" data-from="0" data-to="100000" data-speed="5000" data-refresh-interval="50"></span>
-                                <span class="number-info">News analysed</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 col-md-4">
-                            <div class="numbers">
-                                <span class="number" data-from="0" data-to="67" data-speed="5000" data-refresh-interval="50"></span>
-                                <span class="number-info">Risk factors developed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Counter  -->
-
-            <!-- Features / Mockup -->
-            <section class="section text-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <hgroup class="title-group">
-                                <h3 class="section-title">Years of research... into your inbox</h3>
-                                <h5 class="subtitle">Our machine lerning algorithms aer standing on the shoulder of giants.  So you can finally stop being surprised by financial markets.</h5>
-                            </hgroup>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <!-- Left Box -->
-                            <ul class="boxes-list mirror">
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-news"></i>
-                                        <div class="box">
-                                            <h4 class="title">Knowledge is power</h4>
-                                            <p>Our machine learning algorithms identify what you need to make better decisions.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-globe"></i>
-                                        <div class="box">
-                                            <h4 class="title">Discover a new world</h4>
-                                            <p>Stay informed on all the events around the world which have an impact on your financials.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-clock"></i>
-                                        <div class="box">
-                                            <h4 class="title">Save time</h4>
-                                            <p>Forget about spending hours searching for the news you need. We will bring them to you.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <figure>
-                                <img src="img/iphone6right.png" class="centered" alt="iphone" />
-                            </figure>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <!-- Right Box -->
-                            <ul class="boxes-list">
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-wallet"></i>
-                                        <div class="box">
-                                            <h4 class="title">Become a better investor</h4>
-                                            <p>By discovering which events are the most relevant for your porfolio, you'll learn how to better manage your investments.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-graduation-cap"></i>
-                                        <div class="box">
-                                            <h4 class="title">Graduated tools</h4>
-                                            <p> Our algorithms are based on universities and central banks research to better understand how markets work.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="iconbox">
-                                        <i class="icon icon-heart"></i>
-                                        <div class="box">
-                                            <h4 class="title">Givers, not takers</h4>
-                                            <p> We deeply value privacy. We designed our systems to require only the strictly necessary information. </p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Features -->
-            
-            <!-- Call To Action -->
-            <section class="section get-started">
-                <div class="container">
-                    <div class="row">
-                        <article class="call-to flex flex-middle">
-                            <div class="col-md-6 col-md-offset-2 borhar_responsive">
-                                <h3 class="title">Questions or suggestions?</h3>
-                                <p>If your fund is missing, you have suggestions about how we should improve the newsletter, or you simply want to ask us something, drop us an email! </p>
-                            </div>
-                            <div class="btn-duo">
-                                 <a href="mailto:support@brigadier.club" class="btn btn-danger rounded">Contact us</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <!-- End Call to Action  -->
-
-            <!-- Contact Us Wrap  -->
-            <section class="section contact">
-                <div class="container">
-                    <div class="row">
-                        <!-- Contact Left Content  -->
-                        <div class="col-md-6">
-                            <hgroup class="title-group">
-                                <h3 class="section-title">Join the club today, for free - BETA VERSION, INVITATION ONLY</h3>
-                            </hgroup>
-                            <div class="iconbox">
-                                <i class="icon icon-mail"></i>
-                                <div class="box">
-                                    <h4 class="title">Add your email</h4>
-                                    <p>Well, we need this to deliver the newsletter!</p>
-                                </div>
-                            </div>
-                            <div class="iconbox">
-                                <i class="icon icon-funnel"></i>
-                                <div class="box">
-                                    <h4 class="title">Add the funds</h4>
-                                    <p>These are the funds you want to monitor. We will not ask you how much you invested. Just make sure the portfolio reaches 100%.</p>
-                                </div>
-                            </div>
-                            <div class="iconbox">
-                                <i class="icon icon-folder"></i>
-                                <div class="box">
-                                    <h4 class="title">Done!</h4>
-                                    <p>We don't share your data and we take all the possible measure to secure them. But have a look at our terms and conditions and privacy terms.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Contact Left  -->
-
-                        <!-- Contact Form Wrap  -->
-                        <div class="col-md-6" id="form-section">
-                            <div class="container">
-                                <!-- Progressbar Wrap  -->
-                                <div class="progress-bar-multi">
-                                    <div class="step">
-                                        <p> User</p>
-                                        <div class="bullet">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="check fas fa-check"></div>
-                                    </div>
-                                    <div class="step">
-                                        <p>Funds</p>
-                                        <div class="bullet">
-                                            <span>2</span>
-                                        </div>
-                                        <div class="check fas fa-check"></div>
-                                    </div>
-                                    <div class="step">
-                                        <p>Done</p>
-                                        <div class="bullet">
-                                            <span>3</span>
-                                        </div>
-                                        <div class="check fas fa-check"></div>
-                                    </div>
-                                </div>
-                                <!-- End Progress bar  -->
-
-                                <!-- Form Content Wrap  -->
-                                <div class="form-outer">
-                                    <form id="user-data-form">
-                                        <!-- Field One  -->
-                                        <div class="page slide-page">
-                                            <div class="title">Contact Info:</div>
-                                            <div class="field">
-                                                <div class="label">First Name</div>
-                                                <input type="text" required id="first-name-text"><br/>
-                                                <span id="first-error"></span>
-                                            </div>
-                                            <div class="field">
-                                                <div class="label">Last Name</div>
-                                                <input type="text" required id="last-name-text"><br/>
-                                                <span id="last-error"></span>
-                                            </div>
-                                            <div class="field">
-                                                <div class="label">Email Address</div>
-                                                <input type="text" required id="email-text"><br/>
-                                                <span id="email-error"></span>
-                                            </div>
-                                            <div class="field">
-                                                <button class="firstNext next">Next</button>
-                                            </div>
-                                      </div>
-                                      <!-- End  -->
-                                      <!-- Field Two  -->
-                                      <div class="page">
-                                          <div class="title">Portfolio Info:</div>
-                                          <div class="field">
-                                              <span id="percentage-error"></span>
-                                              <span id="table-error"></span>
-                                          </div>
-                                            <div class="field">
-                                                <div class="label">Funds</div>
-                                                <select id="first-selection">
-                                                    <option selected value="">Select Provider</option>
-                                                </select>&nbsp;
-                                                <select id="second-selection">
-                                                    <option selected value="">Select Ticker</option>
-                                                </select>
-                                            </div>
-                                            <div class="field">
-                                                <table id="item-table" style="width: 100%;">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Provider</th>
-                                                            <th>Ticker</th>
-                                                            <th>% of Portfolio</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr id="1">
-                                                            <td> <label id="first-text1"></label> </td>
-                                                            <td> <label id="second-text1"></label> </td>
-                                                            <td><input type="text" id="percentage-text1" sub-id="1" style="width:57px" onchange="ChangeDynamic(this)"></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="field">
-                                                <button type="button" id="Btnadd">Add</button>&nbsp;
-                                                <button type="button" id="Btndelete">Delete</button>
-                                            </div>
-                                            <div class="field btns">
-                                                <button class="prev-1 prev">Previous</button>
-                                                <button class="next-1 next" id="nextbtn">Next</button>
-                                            </div>
-                                        </div>
-                                        <!-- End  -->
-                                        <!-- Field Three  -->
-                                        <div class="page">
-                                            <div class="title">Almost there!</div>
-                                            <div><p>By joining the club I declare I read the <a href="https://www.brigadier.club/terms.html"> terms and conditions</a> and the <a href="https://www.brigadier.club/privacy.html"> privacy policy </a>.</p> </div>
-                                            <div class="field btns">
-                                                <button class="prev-2 prev">Previous</button>
-                                                <button class="submit" type="submit">Join the club</button>
-                                            </div>
-                                        </div>
-                                        <!-- End  -->
-                                    </form>
-                                </div>
-                                <!-- End Contact  -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- End Contact  -->
-
-        </main>
-        <!-- End Main  -->
-
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="copyright"> &copy; <time datetime="2021">2021</time> Brigadier. All Rights Reserved. Developed by <a href="https://uk.linkedin.com/in/andreapirrone"> Andrea Pirrone </a> <a href="https://twitter.com/brigadier_club"><i class="icon icon-twitter"> </i></a>  </p>
-                    </div>
                 </div>
             </div>
-        </footer>
-        <!-- End Footer  -->
-        <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/bootstrap.min.js"></script>
+            </div>
+        </div>
+        <div class="row text-center way-fade-up mt-4">
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="far fa-edit"></i>
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">SEO Services</h5>
+                <div class="service-border"></div>
+                <p class="card-text">SEO (Search engine Optimization) has become an inseparable part of web development. Developing a website and not doing digital marketing is like staring a business and not telling anyone.</p>
 
-        <script src="js/vendor/jquery.appear.js"></script>
-        <script src="js/vendor/slick.min.js"></script>
-        <script src="js/vendor/jquery.countTo.js"></script>
-        <script src="js/vendor/jquery.parallax.min.js"></script>
-        <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="fab fa-wordpress-simple"></i>
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">Wordpress Themes</h5>
+                <div class="service-border"></div>
+                <p class="card-text">Wordpress theme development from scratch.web development is developing a website with online payment gateway system.custom theme development and plugins development. </p>
 
-        <script src="js/main.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/function.js"></script>
+                </div>
+            </div>
+            </div>
+            <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                <i class="fab fa-joomla"></i>
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">joomla Development</h5>
+                <div class="service-border"></div>
+                <p class="card-text">joomla design and development is the most important and first step in online branding and customer acquizition. It creates value and trust. we also develop custom theme as per your requirement</p>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+  <footer>
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="r-icon text-center mt-3">
+            <ul>
+              <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <p class="text-muted" style="font-size:14px;">&copy; 2021 Brigadier | All Rights Reserved | Developed by Andrea Pirrone </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/app.js"></script>
     </body>
 </html>
