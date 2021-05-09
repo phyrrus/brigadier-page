@@ -8,8 +8,8 @@ $(document).ready(function () {
         var newRow = $("<tr>");
         var cols = "";
 
-        cols += '<td><select class="form-control" id="first-selection' + counter + '"/><option selected value=""></option></td>';
-        cols += '<td><select class="form-control" id="second-selection' + counter + '"/><option selected value=""></option></td>';
+        cols += '<td><select class="form-control" id="first-selection' + counter + '"/><option selected value="">Select Provider</option></select></td>';
+        cols += '<td><select class="form-control" id="second-selection' + counter + '"/><option selected value="">Select Ticker</option></select></td>';
         cols += '<td><input type="number" class="form-control" placeholder = "%" id="inputPercentage' + counter + '"/></td>';
 
         cols += '<td><input type="button" class="ibtnDel btn btn-md btn-danger "  value="Delete"></td>';
