@@ -1,6 +1,8 @@
 
+
+var GBQuantiy = 0, counter = 0, Provider = '', Ticker = '';
+
 $(document).ready(function () {
-    var counter = 0;
 
     $("#addrow").on("click", function () {
         var newRow = $("<tr>");
@@ -22,6 +24,10 @@ $(document).ready(function () {
     });
 });
 
+
+$(document).ready(function () {
+    firstSelectionDD();
+});
 
 function firstSelectionDD() {
     $.get('js/etf_provider_ticker.json', function (data) {
@@ -54,6 +60,6 @@ $(document).on('change', '#first-selection', function () {
 });
 
 $(document).on('change', '#second-selection', function () {
-    $('#first-text' + GBCount).text($('#first-selection').val());
-    $('#second-text' + GBCount).text($('#second-selection').val());
+    $('#first-text' + counter).text($('#first-selection').val());
+    $('#second-text' + counter).text($('#second-selection').val());
 });
