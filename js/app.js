@@ -1,6 +1,6 @@
 
 
-var counter = 0, Provider = '', Ticker = '';
+var counter = 0
 
 $(document).ready(function () {
 
@@ -22,10 +22,8 @@ $(document).ready(function () {
         $(this).closest("tr").remove();       
         counter -= 1
     });
+
 });
-
-
-
 
 $(document).ready(function () {
     firstSelectionDD();
