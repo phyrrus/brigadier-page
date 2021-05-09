@@ -1,6 +1,13 @@
 
 /* Basic style */
 
+@font-face{
+  font-family: Plantin;
+  src:local("Plantin MT Std"),url(/font/Plantin.woff2) format("woff2");
+  font-weight:400;
+  font-style:normal
+  }
+
 *{
     margin:0;
     padding: 0;
@@ -28,15 +35,6 @@ p {
 body{
     background-color: #ffffff;
 }
-
-@keyframes animate {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-  }
 
 /* Header -----------------------------------------------------------------------*/
 
