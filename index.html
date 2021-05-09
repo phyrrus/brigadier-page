@@ -153,38 +153,34 @@
               </div>
             </div>
             <div class="form-group row">
+              <label class="col-sm-2 col-form-label"></label>
+            </div>
+            <div class="form-group row">
               <label class="col-sm-2 col-form-label"> Create a Portfolio to Track </label>
               <div class="col-10">
                 <table class="table order-list">
-                  <thead>
-                    <tr>
-                      <th scope="col-sm-4">Provider</th>
-                      <th scope="col-sm-4">Ticker</th>
-                      <th scope="col-sm-4">% of Portfolio</th>
-                    </tr>
-                  </thead>
                   <tbody>
                     <tr>
-                      <td class="col-sm-4">
+                      <td  style="width: 30%">
                         <select id="first-selection" class="form-control">
                           <option selected value="">Select Provider</option>
                         </select>
                       </td>
-                      <td class="col-sm-4">
+                      <td  style="width: 30%">
                         <select id="second-selection" class="form-control">
                           <option selected value="">Select Ticker</option>
                         </select>
                       </td>
-                      <td class= "col-sm-4">
-                        <input type="number" class="form-control" id="inputName" placeholder="%">
+                      <td  style="width: 20%">
+                        <input type="number" class="form-control" id="inputPercentage" placeholder="% Portfolio" min="0" onchange="ChangeDynamic(this)">
                       </td>
-                      <td class="col-sm-4"><a class="deleteRow"></a>
+                      <td  style="width: 20%"><a class="deleteRow"></a>
                       </td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                        <td style="text-align: left;">
+                        <td  style="width: 30%">
                             <input type="button" class="btn btn-lg btn-block " id="addrow" value="Add Row" />
                         </td>
                     </tr>
@@ -209,7 +205,7 @@
             </div>
             <div class="form-group row">
               <label class="col-sm-2 col-form-label">
-                <button class="btn btn-primary" type="submit">Subscribe</button>
+                <button class="btn btn-primary" type="submit" id="subscribebtn">Subscribe</button>
               </label>
             </div>
           </form>
@@ -218,9 +214,7 @@
     </div>
   </section>
 
-
-
-    <!-- footer -->
+  <!-- footer -->
   <footer>
     <div class="container h-100 d-flex align-items-center justify-content-center">
       <div class="row">

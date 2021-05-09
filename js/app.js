@@ -1,6 +1,6 @@
 
 
-var GBQuantiy = 0, counter = 0, Provider = '', Ticker = '';
+var counter = 0, Provider = '', Ticker = '';
 
 $(document).ready(function () {
 
@@ -23,6 +23,8 @@ $(document).ready(function () {
         counter -= 1
     });
 });
+
+
 
 
 $(document).ready(function () {
@@ -62,4 +64,28 @@ $(document).on('change', '#first-selection', function () {
 $(document).on('change', '#second-selection', function () {
     $('#first-text' + counter).text($('#first-selection').val());
     $('#second-text' + counter).text($('#second-selection').val());
+});
+
+
+
+
+function CheckPercentage() {
+    var Percentage = 0, Sum = 0;
+    for (i = 0; i < counter; i++) {
+        Percentage = parseInt($('#inputPercentage' + (i + 1)).val());
+        Sum += Percentage;
+    }
+    if (Sum > 100) {
+        $('#percentage-error').html('<span style="color:red">The sum of the percentages must be 100%</span>');
+        return;
+    } else if (Sum < 100) {
+        $('#percentage-error').html('<span style="color:red">The sum of the percentages must be 100%</span>');
+        return;
+    } else {
+        $('#percentage-error').html('');
+    }
+}
+
+$('#subscribebtn').click(function () {
+    CheckPercentage();
 });
