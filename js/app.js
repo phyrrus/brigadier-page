@@ -122,8 +122,10 @@ function CheckPercentage() {
   }
 }
 
-$("#subscribebtn").click(function () {
 
+
+
+$("form").on('submit', function (event) {
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
   }
@@ -131,9 +133,10 @@ $("#subscribebtn").click(function () {
   if ($("#inputEmail").val().trim() === "") {
     return $("#inputEmail").focus();
   }
-  
+
   CheckPercentage();
 
+  event.preventDefault();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
