@@ -123,18 +123,17 @@ function CheckPercentage() {
 }
 
 $("#subscribebtn").click(function () {
+
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
   }
+
   if ($("#inputEmail").val().trim() === "") {
     return $("#inputEmail").focus();
   }
-
+  
   CheckPercentage();
-});
 
-$("form").on('submit', function (event) {
-  event.preventDefault();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
