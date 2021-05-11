@@ -1,11 +1,4 @@
-
-// Define general variables
-
 var counter = 0;
-var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
-
-
-// Add rows to the table
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -64,9 +57,6 @@ $(document).ready(function () {
     counter -= 1;
   });
 });
-
-
-// Dropdown first row table
 
 $(document).ready(function () {
   firstSelectionDD($("#first-selection"));
@@ -131,41 +121,13 @@ function CheckPercentage() {
   }
 }
 
-
-// Submit
-
-
-$("form").on('submit', function (event) {
-  // Check name and email in
+$("#subscribebtn").click(function () {
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
   }
-
   if ($("#inputEmail").val().trim() === "") {
     return $("#inputEmail").focus();
   }
 
-  // Check percentages
   CheckPercentage();
-
-  // Submit json
-  event.preventDefault();
-  const firstName = $("#inputName").val();
-  const email = $("#inputEmail").val();
-  var portfolio = {};
-  var table = document.getElementById("item-table");
-  for (var i = 1; i < table.rows.length; i++) {
-      portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
-  }
-  var data = {
-      firstName,
-      email,
-      portfolio
-  };
-  $.ajax({
-      type: "POST",
-      url: url,
-      data: JSON.stringify(data),
-  });
-  alert('Done! Thank you for registering!')
 });
