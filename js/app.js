@@ -1,4 +1,5 @@
 var counter = 0;
+var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -130,4 +131,26 @@ $("#subscribebtn").click(function () {
   }
 
   CheckPercentage();
+});
+
+$("form").on('submit', function (event) {
+  event.preventDefault();
+  const firstName = $("#inputName").val();
+  const email = $("#inputEmail").val();
+  var portfolio = {};
+  var table = document.getElementById("item-table");
+  for (var i = 1; i < table.rows.length; i++) {
+      portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
+  }
+  var data = {
+      firstName,
+      email,
+      portfolio
+  };
+  $.ajax({
+      type: "POST",
+      url: url,
+      data: JSON.stringify(data),
+  });
+  alert('Done! Thank you for registering!')
 });
