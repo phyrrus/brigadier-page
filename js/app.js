@@ -125,6 +125,9 @@ $("#subscribebtn").click(function () {
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
   }
+  if ($("#inputEmail").val().trim() === "") {
+    return $("#inputEmail").focus();
+  }
 
   CheckPercentage();
 });
