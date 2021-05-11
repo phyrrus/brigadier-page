@@ -1,5 +1,11 @@
+
+// Define general variables
+
 var counter = 0;
 var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
+
+
+// Add rows to the table
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -58,6 +64,9 @@ $(document).ready(function () {
     counter -= 1;
   });
 });
+
+
+// Dropdown first row table
 
 $(document).ready(function () {
   firstSelectionDD($("#first-selection"));
@@ -123,9 +132,11 @@ function CheckPercentage() {
 }
 
 
+// Submit
 
 
 $("form").on('submit', function (event) {
+  // Check name and email in
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
   }
@@ -134,8 +145,10 @@ $("form").on('submit', function (event) {
     return $("#inputEmail").focus();
   }
 
+  // Check percentages
   CheckPercentage();
 
+  // Submit json
   event.preventDefault();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
