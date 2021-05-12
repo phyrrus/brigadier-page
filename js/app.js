@@ -1,5 +1,79 @@
 var counter = 0;
-var url = "ADD URL HERE";
+var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
+
+function CheckPercentage() {
+  var Percentage = 0,
+    Sum = 0;
+  for (i = 0; i < $(".inputPercentage").length; i++) {
+    Percentage = Number($(".inputPercentage").eq(i).val().trim());
+    Sum += Percentage;
+  }
+  if (Sum > 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The sum of the percentages must not be greater than 100%</span>'
+    );
+    return;
+  } else if (Sum < 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The sum of the percentages must not be less 100%</span>'
+    );
+    return;
+  } else {
+    $("#percentage-error").html("");
+  }
+}
+
+function CheckInputs() {
+  if ($("#inputName").val().trim() === "") {
+    return $("#inputName").focus();
+  }
+  if ($("#inputEmail").val().trim() === "") {
+    return $("#inputEmail").focus();
+  }
+  CheckPercentage();
+}
+
+$("form").on('submit', function (event) {
+  event.preventDefault();
+  CheckInputs();
+  const firstName = $("#inputName").val();
+  const email = $("#inputEmail").val();
+  var portfolio = {};
+  var table = document.getElementById("item-table");
+  // for (var i = 1; i < table.rows.length; i++) {
+  //   alert(table.rows[i].cells[1])
+  //     // portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
+  // }
+
+  $('#item-table > tbody').find('tr').each(function() {
+    console.log($(this).find('td:nth-child(2) select').val());
+    console.log($(this).find('td input').val());
+    portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
+  });
+  var payload = {
+      firstName,
+      email,
+      portfolio
+  };
+  console.log(payload)
+  fetch(url, {
+      type: "POST",
+      data: JSON.stringify(payload),
+  }).then(resp => {
+    if (!resp.ok) {
+        console.error(resp);
+        return;
+    }
+    // Display success message.
+    successMessage.style.display = "block";
+    contactForm.style.display = "none";
+  });
+})
+
+
+
+
+
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -11,9 +85,9 @@ $(document).ready(function () {
       counter +
       '"><option selected value="">Select Provider</option></select></td>';
     cols +=
-      '<td><select class="form-control" id="second-selection' +
+      '<td><select class="form-control" class="second-selection" id="second-selection' +
       counter +
-      '"><option selected value="">Select Ticker</option></select></td>';
+      '"><option selected value="test">Select Ticker</option><option selected value="test1">Select Ticker</option></select></td>';
     cols +=
       '<td><input type="number" class="form-control inputPercentage" placeholder="% Portfolio" min="0" id="inputPercentage' +
       counter +
@@ -99,66 +173,3 @@ $(document).on("change", "#second-selection", function () {
   $("#first-text" + counter).text($("#first-selection").val());
   $("#second-text" + counter).text($("#second-selection").val());
 });
-
-
-
-function CheckPercentage() {
-  var Percentage = 0,
-    Sum = 0;
-  for (i = 0; i < $(".inputPercentage").length; i++) {
-    Percentage = Number($(".inputPercentage").eq(i).val().trim());
-    Sum += Percentage;
-  }
-  if (Sum > 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The sum of the percentages must not be greater than 100%</span>'
-    );
-    return;
-  } else if (Sum < 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The sum of the percentages must not be less 100%</span>'
-    );
-    return;
-  } else {
-    $("#percentage-error").html("");
-  }
-}
-
-function CheckInputs() {
-  if ($("#inputName").val().trim() === "") {
-    return $("#inputName").focus();
-  }
-  if ($("#inputEmail").val().trim() === "") {
-    return $("#inputEmail").focus();
-  }
-  CheckPercentage();
-}
-
-$("form").on('submit', function (event) {
-  event.preventDefault();
-  CheckInputs();
-  const firstName = $("#inputName").val();
-  const email = $("#inputEmail").val();
-  var portfolio = {};
-  var table = document.getElementById("item-table");
-  for (var i = 1; i < table.rows.length; i++) {
-      portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
-  }
-  var payload = {
-      firstName,
-      email,
-      portfolio
-  };
-  fetch(url, {
-      type: "POST",
-      data: JSON.stringify(payload),
-  }).then(resp => {
-    if (!resp.ok) {
-        console.error(resp);
-        return;
-    }
-    // Display success message.
-    successMessage.style.display = "block";
-    contactForm.style.display = "none";
-  });
-})
