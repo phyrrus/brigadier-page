@@ -134,7 +134,7 @@ function CheckInputs() {
 }
 
 $("form").on('submit', function (event) {
-  CheckInputs()
+  CheckInputs();
   event.preventDefault();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
@@ -153,5 +153,5 @@ $("form").on('submit', function (event) {
       url: url,
       data: JSON.stringify(data),
   });
-  alert('Done! Shortly you will receive a confirmation email. If you do not see, please check your spam folder. Thank you for registering!')
+  alert('Done! Shortly you will receive a confirmation email. If you do not see it, please check your spam folder. Thank you for registering!')
 });
