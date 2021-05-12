@@ -1,5 +1,5 @@
 var counter = 0;
-var url = "https://brigadier-backend-functions.azurewebsites.net/api/form_to_userdb?";
+var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
 function CheckPercentage() {
   var Percentage = 0,
