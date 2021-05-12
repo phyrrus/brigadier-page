@@ -40,16 +40,11 @@ $("form").on('submit', function (event) {
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
-  var table = document.getElementById("item-table");
-    for (var i = 1; i < table.rows.length; i++) {
-      alert(table.rows[i].cells[1])
-      portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
-    }
-  //$('#item-table > tbody').find('tr').each(function() {
-  //  console.log($(this).find('td:nth-child(2) select').val());
-  //  console.log($(this).find('td input').val());
-  //  portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
-  //});
+  $('#item-table > tbody').find('tr').each(function() {
+    console.log($(this).find('td:nth-child(2) select').val());
+    console.log($(this).find('td input').val());
+    portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
+  });
   var data = {
       firstName,
       email,
