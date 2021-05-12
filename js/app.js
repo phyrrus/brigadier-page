@@ -39,12 +39,12 @@ $("form").on('submit', function (event) {
   CheckInputs();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
-  //var portfolio = {};
-  //var table = document.getElementById("item-table");
-  //for (var i = 1; i < table.rows.length; i++) {
-  //  alert(table.rows[i].cells[1])
-  //  portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
-  //}
+  var portfolio = {};
+  var table = document.getElementById("item-table");
+    for (var i = 1; i < table.rows.length; i++) {
+      alert(table.rows[i].cells[1])
+      portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
+    }
 
   //$('#item-table > tbody').find('tr').each(function() {
   //  console.log($(this).find('td:nth-child(2) select').val());
@@ -53,8 +53,8 @@ $("form").on('submit', function (event) {
   //});
   var data = {
       firstName,
-      email//,
-      //portfolio
+      email,
+      portfolio
   };
   $.ajax({
     type: "POST",
