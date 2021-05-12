@@ -1,6 +1,7 @@
 var counter = 0;
 var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
+//ad
 function CheckPercentage() {
   var Percentage = 0,
     Sum = 0;
