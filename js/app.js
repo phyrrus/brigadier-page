@@ -1,5 +1,5 @@
 var counter = 0;
-var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
+var url = "https://brigadier-backend-functions.azurewebsites.net/api/form_to_userdb?";
 
 function CheckPercentage() {
   var Percentage = 0,
@@ -38,28 +38,28 @@ $("form").on('submit', function (event) {
   CheckInputs();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
-  //var portfolio = {};
-  //var table = document.getElementById("item-table");
-  // for (var i = 1; i < table.rows.length; i++) {
-  //   alert(table.rows[i].cells[1])
-  //     // portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
-  // }
+  var portfolio = {};
+  var table = document.getElementById("item-table");
+  for (var i = 1; i < table.rows.length; i++) {
+    alert(table.rows[i].cells[1])
+    portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
+  }
 
   //$('#item-table > tbody').find('tr').each(function() {
   //  console.log($(this).find('td:nth-child(2) select').val());
   //  console.log($(this).find('td input').val());
   //  portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
   //});
-  var payload = {
+  var data = {
       firstName,
-      email//,
-      //portfolio
+      email,
+      portfolio
   };
-  console.log(payload)
-  fetch(url, {
-      type: "POST",
-      data: JSON.stringify(payload),
-  })
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: JSON.stringify(data),
+});
 })
 
 
