@@ -1,5 +1,5 @@
 var counter = 0;
-var url = "ADD URL FUNCTION HERE";
+var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -100,6 +100,8 @@ $(document).on("change", "#second-selection", function () {
   $("#second-text" + counter).text($("#second-selection").val());
 });
 
+
+
 function CheckPercentage() {
   var Percentage = 0,
     Sum = 0;
@@ -122,8 +124,6 @@ function CheckPercentage() {
   }
 }
 
-
-
 function CheckInputs() {
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
@@ -145,15 +145,21 @@ $("form").on('submit', function (event) {
   for (var i = 1; i < table.rows.length; i++) {
       portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
   }
-  var data = {
+  var payload = {
       firstName,
       email,
       portfolio
   };
-  $.ajax({
+  fetch(url, {
       type: "POST",
-      url: url, // add url here
-      data: JSON.stringify(data),
+      data: JSON.stringify(payload),
+  }).then(resp => {
+    if (!resp.ok) {
+        console.error(resp);
+        return;
+    }
+    // Display success message.
+    successMessage.style.display = "block";
+    contactForm.style.display = "none";
   });
-  alert('Done! Shortly you will receive a confirmation email. If you do not see it, please check your spam folder. Thank you for registering!')
-});
+})
