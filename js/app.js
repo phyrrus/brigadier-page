@@ -45,7 +45,6 @@ $("form").on('submit', function (event) {
       alert(table.rows[i].cells[1])
       portfolio[table.rows[i].cells[1].textContent] = table.rows[i].cells[2].textContent
     }
-
   //$('#item-table > tbody').find('tr').each(function() {
   //  console.log($(this).find('td:nth-child(2) select').val());
   //  console.log($(this).find('td input').val());
