@@ -122,6 +122,8 @@ function CheckPercentage() {
   }
 }
 
+
+
 function CheckInputs() {
   if ($("#inputName").val().trim() === "") {
     return $("#inputName").focus();
@@ -134,8 +136,8 @@ function CheckInputs() {
 }
 
 $("form").on('submit', function (event) {
-  CheckInputs();
   event.preventDefault();
+  CheckInputs();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
@@ -150,7 +152,7 @@ $("form").on('submit', function (event) {
   };
   $.ajax({
       type: "POST",
-      url: url,
+      url: url, // add url here
       data: JSON.stringify(data),
   });
   alert('Done! Shortly you will receive a confirmation email. If you do not see it, please check your spam folder. Thank you for registering!')
