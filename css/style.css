@@ -36,6 +36,14 @@ body{
     background-color: #ffffff;
 }
 
+section{
+  background-color: #ffffff;
+}
+
+.panna {
+  background-color: #f6f1ed;
+}
+
 /* Header -----------------------------------------------------------------------*/
 
 header {

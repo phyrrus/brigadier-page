@@ -1,5 +1,5 @@
 var counter = 0;
-var url = "https://brigadier-data.azurewebsites.net/api/brigadier-form-input?";
+var url = "ADD URL HERE";
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
@@ -131,7 +131,6 @@ function CheckInputs() {
   if ($("#inputEmail").val().trim() === "") {
     return $("#inputEmail").focus();
   }
-
   CheckPercentage();
 }
 
