@@ -55,12 +55,8 @@ $("form").on('submit', function (event) {
     url: url,
     data: JSON.stringify(data),
 });
+alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.')
 })
-
-
-
-
-
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
