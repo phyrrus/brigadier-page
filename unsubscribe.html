@@ -25,7 +25,7 @@
       </div>
       <div class="row mt-5">
         <div class="col">
-          <form onsubmit="unsub()">
+          <form>
             <div class="form-group row">
               <div class="col-6">
                 <input type="email" class="form-control" id="unsubEmail" placeholder="Email">
@@ -58,21 +58,6 @@
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootsrap/js/bootstrap.min.js"></script>
-    <script>
-      var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
-      function unsub() {
-        if ($("#unsubEmail").val().trim() === "") {
-          return $("#unsubEmail").focus();
-        }
-        var email = $("#unsubEmail").val();
-        $.ajax({
-          type: "POST",
-          url: url,
-          data: JSON.stringify(email),
-        });
-        alert('You are no longer a member of Brigadier.');
-        location.reload()
-      }
-    </script>
+    <script src="js/unsub.js"></script>
     </body>
 </html>
