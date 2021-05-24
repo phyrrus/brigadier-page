@@ -10,7 +10,7 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // -----------------------------------------------------------------
 
 function CheckInputs() {
-  if ($("#unsubEmail").val().trim() === "") {
+  if ($("#unsubEmail").val().trim() == "") {
     return $("#unsubEmail").focus();
   }
 }
