@@ -6,36 +6,6 @@
 var counter = 0;
 var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
-// -----------------------------------------------------------------
-// Unsubscribe
-// -----------------------------------------------------------------
-
-function CheckUserInput() {
-  if ($("#inputName").val().trim() === "") {
-    return $("#inputName").focus();
-  }
-  if ($("#inputEmail").val().trim() === "") {
-    return $("#inputEmail").focus();
-  }
-}
-
-$("#unsubscribe-form").on('submit', function (event) {
-  event.preventDefault();
-  CheckUserInput();
-  const firstName = $("#inputName").val();
-  const email = $("#inputEmail").val();
-  var data = {
-      firstName,
-      email
-  };
-  $.ajax({
-    type: "POST",
-    url: url,
-    data: JSON.stringify(data),
-});
-alert('You are no longer a member of Brigadier.');
-location.reload()
-})
 
 // -----------------------------------------------------------------
 // Registration form
@@ -73,7 +43,7 @@ function CheckInputs() {
   CheckPercentage();
 }
 
-$("#registration-form").on('submit', function (event) {
+$("form").on('submit', function (event) {
   event.preventDefault();
   CheckInputs();
   const firstName = $("#inputName").val();
