@@ -157,3 +157,23 @@ $(document).on("change", "#second-selection", function () {
   $("#first-text" + counter).text($("#first-selection").val());
   $("#second-text" + counter).text($("#second-selection").val());
 });
+
+
+// Unsubscribe
+
+$("unsubscribe-form").on('submit', function (event) {
+  event.preventDefault();
+  const firstName = $("#inputName").val();
+  const email = $("#inputEmail").val();
+  var data = {
+      firstName,
+      email
+  };
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: JSON.stringify(data),
+});
+alert('You are no longer a member of Brigadier.');
+location.reload()
+})
