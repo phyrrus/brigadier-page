@@ -1,9 +1,16 @@
+
+// -----------------------------------------------------------------
+// Main vars
+// -----------------------------------------------------------------
+
 var counter = 0;
 var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
+// -----------------------------------------------------------------
 // Unsubscribe
+// -----------------------------------------------------------------
 
-$("unsubscribe-form").on('submit', function (event) {
+$("#unsubscribe-form").on('submit', function (event) {
   event.preventDefault();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
@@ -20,7 +27,10 @@ alert('You are no longer a member of Brigadier.');
 location.reload()
 })
 
-//ad
+// -----------------------------------------------------------------
+// Registration form
+// -----------------------------------------------------------------
+
 function CheckPercentage() {
   var Percentage = 0,
     Sum = 0;
@@ -53,7 +63,7 @@ function CheckInputs() {
   CheckPercentage();
 }
 
-$("form").on('submit', function (event) {
+$("#registration-form").on('submit', function (event) {
   event.preventDefault();
   CheckInputs();
   const firstName = $("#inputName").val();
@@ -77,6 +87,10 @@ $("form").on('submit', function (event) {
 alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
 location.reload()
 })
+
+// -----------------------------------------------------------------
+// Registration form
+// -----------------------------------------------------------------
 
 $(document).ready(function () {
   $("#addrow").on("click", function () {
