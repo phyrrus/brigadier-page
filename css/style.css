@@ -55,16 +55,16 @@ section{
 header {
     height: 100vh;
     width: 100%;
-    background-image:url("../img/hero-bg-p.png");
+    background-image:url("../img/hero-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: relative;
   }
   .header-content {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
   }
   .content-box {

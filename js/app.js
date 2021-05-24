@@ -11,12 +11,12 @@ function CheckPercentage() {
   }
   if (Sum > 100) {
     $("#percentage-error").html(
-      '<span style="color:red">The sum of the percentages must not be greater than 100%</span>'
+      '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
     );
     return;
   } else if (Sum < 100) {
     $("#percentage-error").html(
-      '<span style="color:red">The sum of the percentages must not be less 100%</span>'
+      '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
     );
     return;
   } else {
@@ -55,7 +55,8 @@ $("form").on('submit', function (event) {
     url: url,
     data: JSON.stringify(data),
 });
-alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.')
+alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
+location.reload()
 })
 
 $(document).ready(function () {
