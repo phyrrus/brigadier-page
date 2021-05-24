@@ -10,8 +10,18 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // Unsubscribe
 // -----------------------------------------------------------------
 
+function CheckUserInput() {
+  if ($("#inputName").val().trim() === "") {
+    return $("#inputName").focus();
+  }
+  if ($("#inputEmail").val().trim() === "") {
+    return $("#inputEmail").focus();
+  }
+}
+
 $("#unsubscribe-form").on('submit', function (event) {
   event.preventDefault();
+  CheckUserInput();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var data = {
@@ -89,7 +99,7 @@ location.reload()
 })
 
 // -----------------------------------------------------------------
-// Registration form
+// Table
 // -----------------------------------------------------------------
 
 $(document).ready(function () {
