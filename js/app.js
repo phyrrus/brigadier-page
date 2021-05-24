@@ -1,6 +1,25 @@
 var counter = 0;
 var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
+// Unsubscribe
+
+$("unsubscribe-form").on('submit', function (event) {
+  event.preventDefault();
+  const firstName = $("#inputName").val();
+  const email = $("#inputEmail").val();
+  var data = {
+      firstName,
+      email
+  };
+  $.ajax({
+    type: "POST",
+    url: url,
+    data: JSON.stringify(data),
+});
+alert('You are no longer a member of Brigadier.');
+location.reload()
+})
+
 //ad
 function CheckPercentage() {
   var Percentage = 0,
@@ -159,21 +178,3 @@ $(document).on("change", "#second-selection", function () {
 });
 
 
-// Unsubscribe
-
-$("unsubscribe-form").on('submit', function (event) {
-  event.preventDefault();
-  const firstName = $("#inputName").val();
-  const email = $("#inputEmail").val();
-  var data = {
-      firstName,
-      email
-  };
-  $.ajax({
-    type: "POST",
-    url: url,
-    data: JSON.stringify(data),
-});
-alert('You are no longer a member of Brigadier.');
-location.reload()
-})
