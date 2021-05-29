@@ -153,15 +153,15 @@ function CheckPercentage() {
     $("#percentage-error").html(
       '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
     );
-    return $(".inputPercentage").focus();
+    return false;
   } else if (Sum < 100) {
     $("#percentage-error").html(
       '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
     );
-    return $(".inputPercentage").focus();
+    return false;
   } else {
     $("#percentage-error").html("");
-    return true
+    return true;
   }
 }
 
