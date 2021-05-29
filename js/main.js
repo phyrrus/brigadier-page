@@ -6,7 +6,6 @@
 var counter = 0;
 var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
 
-
 // -----------------------------------------------------------------
 // Registration form
 // -----------------------------------------------------------------
@@ -40,12 +39,12 @@ function CheckInputs() {
   if ($("#inputEmail").val().trim() === "") {
     return $("#inputEmail").focus();
   }
-  CheckPercentage();
 }
 
 $("form").on('submit', function (event) {
   event.preventDefault();
   CheckInputs();
+  CheckPercentage();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
