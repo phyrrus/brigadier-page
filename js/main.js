@@ -10,7 +10,6 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // Registration form
 // -----------------------------------------------------------------
 
-
 $("form").on('submit', function (event) {
   event.preventDefault();
   const firstName = $("#inputName").val();
@@ -154,14 +153,15 @@ function CheckPercentage() {
     $("#percentage-error").html(
       '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
     );
-    return;
+    return false;
   } else if (Sum < 100) {
     $("#percentage-error").html(
       '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
     );
-    return;
+    return false;
   } else {
     $("#percentage-error").html("");
+    return true
   }
 }
 
