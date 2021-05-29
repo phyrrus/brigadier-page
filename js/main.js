@@ -12,25 +12,43 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 
 $("form").on('submit', function (event) {
   event.preventDefault();
-  CheckPercentage();
-  const firstName = $("#inputName").val();
-  const email = $("#inputEmail").val();
-  var portfolio = {};
-  $('#item-table > tbody').find('tr').each(function() {
-    console.log($(this).find('td:nth-child(2) select').val());
-    console.log($(this).find('td input').val());
-    portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
-  });
-  var data = {
-      firstName,
-      email,
-      portfolio
-  };
-  $.ajax({
-    type: "POST",
-    url: url,
-    data: JSON.stringify(data),
-  });
+  var Percentage = 0,
+  Sum = 0;
+  for (i = 0; i < $(".inputPercentage").length; i++) {
+    Percentage = Number($(".inputPercentage").eq(i).val().trim());
+    Sum += Percentage;
+  }
+  if (Sum > 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
+    );
+    return false;
+  } else if (Sum < 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
+    );
+    return false;
+  } else {
+    $("#percentage-error").html("");
+    const firstName = $("#inputName").val();
+    const email = $("#inputEmail").val();
+    var portfolio = {};
+    $('#item-table > tbody').find('tr').each(function() {
+      console.log($(this).find('td:nth-child(2) select').val());
+      console.log($(this).find('td input').val());
+      portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
+    });
+    var data = {
+        firstName,
+        email,
+        portfolio
+    };
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: JSON.stringify(data),
+    });
+  }
   alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
   location.reload()
   })
@@ -137,46 +155,3 @@ $(document).on("change", "#second-selection", function () {
   $("#first-text" + counter).text($("#first-selection").val());
   $("#second-text" + counter).text($("#second-selection").val());
 });
-
-
-// -----------------------------------------------------------------
-// Form checks
-// -----------------------------------------------------------------
-
-function CheckPercentage() {
-  var Percentage = 0,
-  Sum = 0;
-  for (i = 0; i < $(".inputPercentage").length; i++) {
-    Percentage = Number($(".inputPercentage").eq(i).val().trim());
-    Sum += Percentage;
-  }
-  if (Sum > 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
-    );
-    return false;
-  } else if (Sum < 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
-    );
-    return false;
-  } else {
-    $("#percentage-error").html("");
-    return true;
-  }
-}
-
-function CheckInputs() {
-  CheckPercentage();
-  if ($("#inputName").val().trim() === "") {
-    return $("#inputName").focus();
-  }
-  if ($("#inputEmail").val().trim() === "") {
-    return $("#inputEmail").focus();
-  }
-}
-
-
-//$("#subscribebtn").click(function () {
-//  CheckPercentage();
-//});
