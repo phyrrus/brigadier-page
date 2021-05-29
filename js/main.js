@@ -96,7 +96,7 @@ $(document).ready(function () {
         }
         var secondSelection = secondSelectEl;
         secondSelection.empty();
-        secondSelection.append("<option>Select Any Ticker</option>");
+        secondSelection.append('<option selected value="">Select Ticker</option>');
         $.each(vals, function (index, value) {
           secondSelection.append(
             '<option value="' + value + '">' + value + "</option>"
@@ -142,7 +142,7 @@ $(document).on("change", "#first-selection", function () {
     }
     var secondSelection = $("#second-selection");
     secondSelection.empty();
-    secondSelection.append("<option>Select Any Ticker</option>");
+    secondSelection.append('<option selected value="">Select Ticker</option>');
     $.each(vals, function (index, value) {
       secondSelection.append(
         '<option value="' + value + '">' + value + "</option>"
