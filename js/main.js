@@ -10,7 +10,7 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // Registration form
 // -----------------------------------------------------------------
 
-$("#form").on('submit', function (event) {
+$("#subscribeform").on('submit', function (event) {
   event.preventDefault();
   var Percentage = 0,
   Sum = 0;
