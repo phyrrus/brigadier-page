@@ -4,7 +4,82 @@
 // -----------------------------------------------------------------
 
 var counter = 0;
-var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
+var url_subsc = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
+var url_unsub = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
+var url_update = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
+
+// -----------------------------------------------------------------
+// Unsubscribe form
+// -----------------------------------------------------------------
+
+$(document).ready(function () {
+  $("#unsubscribeform").on('submit', function () {
+    const firstName = $("#unsubName").val();
+    const email = $("#unsubEmail").val();
+    var data = {
+        firstName,
+        email
+    };
+    $.ajax({
+      type: "POST",
+      url: url_unsub,
+      data: JSON.stringify(data),
+    });
+    alert('You are now unsubscribed. Please let us know what we can improve to have you back at support@brigadier.club');
+    location.reload()
+  });
+});
+
+// -----------------------------------------------------------------
+// Update form
+// -----------------------------------------------------------------
+
+$(document).ready(function () {
+  $("#updateform").on('submit', function () {
+    var Percentage = 0,
+    Sum = 0;
+    for (i = 0; i < $(".inputPercentage").length; i++) {
+      Percentage = Number($(".inputPercentage").eq(i).val().trim());
+      Sum += Percentage;
+    }
+    if (Sum > 100) {
+      $("#percentage-error").html(
+        '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
+      );
+      return false;
+    } else if (Sum < 100) {
+      $("#percentage-error").html(
+        '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
+      );
+      return false;
+    } else {
+      $("#percentage-error").html("");
+      const firstName = $("#inputName").val();
+      const email = $("#inputEmail").val();
+      var portfolio = {};
+      $('#item-table > tbody').find('tr').each(function() {
+        console.log($(this).find('td:nth-child(2) select').val());
+        console.log($(this).find('td input').val());
+        portfolio[$(this).find('td:nth-child(2) select').val()] = $(this).find('td input').val()
+      });
+      var data = {
+          firstName,
+          email,
+          portfolio
+      };
+      $.ajax({
+        type: "POST",
+        url: url_update,
+        data: JSON.stringify(data),
+      });
+    }
+    alert('Done! We have now updated your details. You will start receiving an updated report starting from next week.');
+    location.reload()
+  });
+});
+
+
+
 
 // -----------------------------------------------------------------
 // Registration form
@@ -45,7 +120,7 @@ $(document).ready(function () {
       };
       $.ajax({
         type: "POST",
-        url: url,
+        url: url_subsc,
         data: JSON.stringify(data),
       });
     }
@@ -53,6 +128,7 @@ $(document).ready(function () {
     location.reload()
   });
 });
+
 
 // -----------------------------------------------------------------
 // Table

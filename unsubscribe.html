@@ -25,10 +25,13 @@
       </div>
       <div class="row mt-5">
         <div class="col">
-          <form>
+          <form id = "unsubscribeform">
             <div class="form-group row">
-              <div class="col-6">
-                <input type="email" class="form-control" name="unsubEmail" id = "unsubEmail" required placeholder="Email">
+              <div class="col-4">
+                <input type="text" class="form-control" id="unsubName" placeholder="Name" required>
+              </div>
+              <div class="col-4">
+                <input type="email" class="form-control" id="unsubEmail" placeholder="Email" required>
               </div>
               <div class="col-2">
                 <button class="btn btn-primary" type="submit">Unsubscribe</button>
@@ -60,6 +63,6 @@
   
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootsrap/js/bootstrap.min.js"></script>
-    <script src="js/unsub.js"></script>
+    <script src="js/main.js"></script>
     </body>
 </html>
