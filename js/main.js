@@ -11,8 +11,7 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // -----------------------------------------------------------------
 
 $(document).ready(function () {
-  $("#subscribeform").on('submit', function (event) {
-    event.preventDefault();
+  $("#subscribeform").on('submit', function () {
     var Percentage = 0,
     Sum = 0;
     for (i = 0; i < $(".inputPercentage").length; i++) {
