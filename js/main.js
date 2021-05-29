@@ -54,8 +54,8 @@ $(document).ready(function () {
       return false;
     } else {
       $("#percentage-error").html("");
-      const firstName = $("#inputName").val();
-      const email = $("#inputEmail").val();
+      const firstName = $("#updateName").val();
+      const email = $("#updateEmail").val();
       var portfolio = {};
       $('#item-table > tbody').find('tr').each(function() {
         console.log($(this).find('td:nth-child(2) select').val());
