@@ -41,9 +41,8 @@ function CheckInputs() {
   }
 }
 
-$("form").on('submit', function (event) {
-  event.preventDefault();
-  CheckInputs();
+$("#subscribebtn").click(function () {
+  CheckInputs()
   CheckPercentage();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
@@ -65,7 +64,8 @@ $("form").on('submit', function (event) {
   });
   alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
   location.reload()
-})
+});
+
 
 // -----------------------------------------------------------------
 // Table
@@ -169,5 +169,3 @@ $(document).on("change", "#second-selection", function () {
   $("#first-text" + counter).text($("#first-selection").val());
   $("#second-text" + counter).text($("#second-selection").val());
 });
-
-
