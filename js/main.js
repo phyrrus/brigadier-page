@@ -63,9 +63,9 @@ $("form").on('submit', function (event) {
     type: "POST",
     url: url,
     data: JSON.stringify(data),
-});
-alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
-location.reload()
+  });
+  alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
+  location.reload()
 })
 
 // -----------------------------------------------------------------
