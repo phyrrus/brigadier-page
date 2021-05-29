@@ -12,6 +12,7 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 
 $("form").on('submit', function (event) {
   event.preventDefault();
+  CheckPercentage();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
