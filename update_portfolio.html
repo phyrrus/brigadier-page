@@ -19,42 +19,42 @@
       <div class="row">
         <div class="col way-fade-left">
           <h2>Update your portfolio</h2>
-          <img src="img/update.svg" style="width: 70%; height:auto;">
+          <img src="img/update.svg" style="width: 50%; height:auto;">
         </div>
       </div>
       <div class="row mt-5">
         <div class="col">
-          <form id = "updateform">
+          <form id="updateform">
             <div class="form-group row">
-              <label class="col-sm-2 col-form-label"> Confirm Contact Info</label>
+              <label class="col-sm-2 col-form-label"> Add Contact Info</label>
               <div class="col-5">
-                <input type="text" class="form-control" id="updateName" placeholder="Name">
+                <input type="text" class="form-control" id="updateName" placeholder="Name" required>
               </div>
               <div class="col-5">
-                <input type="email" class="form-control" id="updateEmail" placeholder="Email">
+                <input type="email" class="form-control" id="updateEmail" placeholder="Email" required>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-2 col-form-label"></label>
             </div>
             <div class="form-group row">
-              <label class="col-sm-2 col-form-label"> Create a New Portfolio to Track </label>
+              <label class="col-sm-2 col-form-label"> Create a Portfolio to Track </label>
               <div class="col-10">
-                <table class="table order-list">
+                <table class="table order-list" id="item-table">
                   <tbody>
                     <tr>
                       <td  style="width: 30%">
-                        <select id="first-selection" class="form-control">
+                        <select id="first-selection" class="form-control" required>
                           <option selected value="">Select Provider</option>
                         </select>
                       </td>
                       <td  style="width: 30%">
-                        <select id="second-selection" class="form-control">
+                        <select id="second-selection" class="form-control" required>
                           <option selected value="">Select Ticker</option>
                         </select>
                       </td>
                       <td  style="width: 20%">
-                        <input type="number" class="form-control" id="inputPercentage" placeholder="% Portfolio" min="0" onchange="ChangeDynamic(this)">
+                        <input type="number" class="form-control inputPercentage" id="inputPercentage" placeholder="% Portfolio" min="0" required>
                       </td>
                       <td  style="width: 20%"><a class="deleteRow"></a>
                       </td>
@@ -72,9 +72,10 @@
                 </table>
               </div>
             </div>
+            <div id="percentage-error"></div>
             <div class="form-group row">
               <label class="col-sm-2 col-form-label">
-                <button class="btn btn-primary" type="submit">Update</button>
+                <button class="btn btn-primary" type="submit" id="subscribebtn">Subscribe</button>
               </label>
             </div>
           </form>
