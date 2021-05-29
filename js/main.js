@@ -10,41 +10,9 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 // Registration form
 // -----------------------------------------------------------------
 
-function CheckPercentage() {
-  var Percentage = 0,
-  Sum = 0;
-  for (i = 0; i < $(".inputPercentage").length; i++) {
-    Percentage = Number($(".inputPercentage").eq(i).val().trim());
-    Sum += Percentage;
-  }
-  if (Sum > 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
-    );
-    return;
-  } else if (Sum < 100) {
-    $("#percentage-error").html(
-      '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
-    );
-    return;
-  } else {
-    $("#percentage-error").html("");
-  }
-}
 
-function CheckInputs() {
-  if ($("#inputName").val().trim() === "") {
-    return $("#inputName").focus();
-  }
-  if ($("#inputEmail").val().trim() === "") {
-    return $("#inputEmail").focus();
-  }
-}
-
-$("#subscribebtn").click(function (event) {
+$("form").on('submit', function (event) {
   event.preventDefault();
-  CheckInputs();
-  CheckPercentage();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
   var portfolio = {};
@@ -65,8 +33,7 @@ $("#subscribebtn").click(function (event) {
   });
   alert('Done! Thank you for registering! You should be receiving a confirmation email shortly. Please check your spam inbox.');
   location.reload()
-});
-
+  })
 
 // -----------------------------------------------------------------
 // Table
@@ -169,4 +136,44 @@ $(document).on("change", "#first-selection", function () {
 $(document).on("change", "#second-selection", function () {
   $("#first-text" + counter).text($("#first-selection").val());
   $("#second-text" + counter).text($("#second-selection").val());
+});
+
+
+// -----------------------------------------------------------------
+// Form checks
+// -----------------------------------------------------------------
+
+function CheckPercentage() {
+  var Percentage = 0,
+  Sum = 0;
+  for (i = 0; i < $(".inputPercentage").length; i++) {
+    Percentage = Number($(".inputPercentage").eq(i).val().trim());
+    Sum += Percentage;
+  }
+  if (Sum > 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The portfolio must add up to 100%. Please reduce the proportions.</span>'
+    );
+    return;
+  } else if (Sum < 100) {
+    $("#percentage-error").html(
+      '<span style="color:red">The portfolio must add up to 100%. Please increase the proportions.</span>'
+    );
+    return;
+  } else {
+    $("#percentage-error").html("");
+  }
+}
+
+function CheckInputs() {
+  if ($("#inputName").val().trim() === "") {
+    return $("#inputName").focus();
+  }
+  if ($("#inputEmail").val().trim() === "") {
+    return $("#inputEmail").focus();
+  }
+}
+
+$("#subscribebtn").click(function () {
+  CheckPercentage();
 });
