@@ -41,8 +41,9 @@ function CheckInputs() {
   }
 }
 
-$("#subscribebtn").click(function () {
-  CheckInputs()
+$("#subscribebtn").click(function (event) {
+  event.preventDefault();
+  CheckInputs();
   CheckPercentage();
   const firstName = $("#inputName").val();
   const email = $("#inputEmail").val();
