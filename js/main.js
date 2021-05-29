@@ -12,7 +12,7 @@ var url = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger
 
 function CheckPercentage() {
   var Percentage = 0,
-    Sum = 0;
+  Sum = 0;
   for (i = 0; i < $(".inputPercentage").length; i++) {
     Percentage = Number($(".inputPercentage").eq(i).val().trim());
     Sum += Percentage;
