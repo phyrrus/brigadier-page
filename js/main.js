@@ -5,8 +5,8 @@
 
 var counter = 0;
 var url_subsc = "https://brigadier-form.azurewebsites.net/api/subscribe?";
-var url_unsub = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
-var url_update = "https://brigadier-testing-functions.azurewebsites.net/api/HttpTrigger1?";
+var url_unsub = "https://brigadier-form.azurewebsites.net/api/usubscribe?";
+var url_update = "https://brigadier-form.azurewebsites.net/api/update?";
 
 // -----------------------------------------------------------------
 // Unsubscribe form
