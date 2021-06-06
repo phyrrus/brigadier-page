@@ -6,18 +6,11 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="238.85307mm"
    height="169.95795mm"
    viewBox="0 0 238.85307 169.95795"
    version="1.1"
-   id="svg8"
-   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
-   sodipodi:docname="hero-bg.svg"
-   inkscape:export-filename="/Users/andreapirrone/bitmap.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   id="svg8">
   <defs
      id="defs2">
     <linearGradient
@@ -77,29 +70,6 @@
          id="path214" />
     </mask>
   </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="2.6112472"
-     inkscape:cx="494.35708"
-     inkscape:cy="280.53851"
-     inkscape:document-units="mm"
-     inkscape:current-layer="g925"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:window-width="1440"
-     inkscape:window-height="759"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -108,13 +78,11 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-3.0754908,-16.325066)">
     <g
@@ -236,7 +204,7 @@
          d="m 500.013,115.39693 h -12.30622 a 9.1377114,9.2475264 0 0 1 -8.46027,12.74006 h -54.00992 a 9.1376949,9.24751 0 0 1 -8.46027,-12.74008 h -11.49404 a 19.233317,19.464458 0 0 0 -19.23334,19.46443 v 246.69517 a 19.233312,19.464453 0 0 0 19.2333,19.46448 H 500.013 a 19.233317,19.464458 0 0 0 19.23333,-19.46445 v 0 -246.69518 A 19.233299,19.46444 0 0 0 500.013,115.39693 Z"
          fill="#ffffff"
          id="path1596"
-         style="stroke-width:0.423078;fill:#f2f2f3;fill-opacity:1" />
+         style="fill:#f7f7f7;fill-opacity:1;stroke-width:0.423078" />
       <image
          transform="matrix(1.0027272,0,0,0.98482527,-1.02933,1.8313758)"
          x="386.37"
@@ -274,12 +242,12 @@
          id="path799"
          style="stroke-width:0.749769" />
       <polygon
-         points="909,358 926,342 924,326 916,320.75 902.75,332.75 "
+         points="926,342 924,326 916,320.75 902.75,332.75 909,358 "
          fill="#f7c4a7"
          id="polygon801"
          transform="matrix(0.75241556,0,0,0.74713177,-114.62977,56.251295)" />
       <polygon
-         points="639.5,498.5 616.5,498.5 625.5,520.5 647.5,514.5 "
+         points="616.5,498.5 625.5,520.5 647.5,514.5 639.5,498.5 "
          fill="#f7c4a7"
          id="polygon803"
          transform="matrix(0.75241556,0,0,0.74713177,29.834077,7.6877264)" />
@@ -299,7 +267,7 @@
          id="path809"
          style="stroke-width:0.749769" />
       <polygon
-         points="714.5,494.5 698.5,486.5 687.5,500.5 698.5,506.5 "
+         points="698.5,486.5 687.5,500.5 698.5,506.5 714.5,494.5 "
          fill="#f7c4a7"
          id="polygon813"
          transform="matrix(0.75241556,0,0,0.74713177,-114.62977,56.251295)" />
