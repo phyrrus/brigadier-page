@@ -162,15 +162,7 @@ $(document).ready(function () {
       var dropdown = firstSelectEl;
       $.getJSON("js/etf_provider_ticker.json", function (data) {
         var key = dropdown.val();
-        var vals = [];
-        switch (key) {
-          case "Vanguard":
-            vals = data.Vanguard.split(",");
-            break;
-          case "Blackrock":
-            vals = data.Blackrock.split(",");
-            break;
-        }
+        var vals = data[key].split(",");
         var secondSelection = secondSelectEl;
         secondSelection.empty();
         secondSelection.append('<option selected value="">Select Ticker</option>');
@@ -208,15 +200,7 @@ $(document).on("change", "#first-selection", function () {
   var dropdown = $(this);
   $.getJSON("js/etf_provider_ticker.json", function (data) {
     var key = dropdown.val();
-    var vals = [];
-    switch (key) {
-      case "Vanguard":
-        vals = data.Vanguard.split(",");
-        break;
-      case "Blackrock":
-        vals = data.Blackrock.split(",");
-        break;
-    }
+    var vals = data[key].split(",");
     var secondSelection = $("#second-selection");
     secondSelection.empty();
     secondSelection.append('<option selected value="">Select Ticker</option>');
