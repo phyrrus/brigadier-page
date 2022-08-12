@@ -3271,8 +3271,8 @@ textarea.form-control-lg {
 
 .btn-dark {
   color: #fff;
-  background-color: #000000;
-  border-color: #000000;
+  background-color: #473130;
+  border-color: #473130;
 }
 .btn-dark:hover {
   color: #fff;
@@ -11376,7 +11376,7 @@ video.bg-video {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(71, 49, 48, 0.8);
 }
 .masthead .masthead-content {
   position: relative;
