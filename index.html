@@ -1,136 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Sailing through financial news" />
+        <meta name="author" content="Andrea Pirrone" />
         <title>Brigadier Club</title>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="/img/brigadier-logo.png"/>
-        <link rel="icon" type="image/png" href="/img/brigadier-logo.png"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="css/styles.css" rel="stylesheet" />
     </head>
-
     <body>
-
-    <header>
-        <div class="container-fluid header-content">
-          <div class="row">
-            <h2>THE NEWSLETTER TRANSLATING MARKETS</span></h2>
-          </div>
-          <div class="row">
-            <div class="content-box ">
-              <br>
-              <form action="https://www.getrevue.co/profile/brigadier_club/add_subscriber" method="post" id="subscribeform" name="revue-form"  target="_blank">
-                <div class="form-group row">
-                  <div class="col-10">
-                    <input type="email" class="form-control transparent-input" id="subEmail" name="member[email]" placeholder="Enter your email address (powered by Revue)" required>
-                  </div>
-                   <div class="col-2">
-                      <button class="btn btn-primary" type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">JOIN</button>
-                    </div>
-                  </div>
-                </form>
+        <!-- Background Video-->
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <!-- Masthead-->
+        <div class="masthead">
+            <div class="masthead-content text-white">
+                <div class="container-fluid px-4 px-lg-0">
+                    <h1 class="mb-4">Between news and markets</h1>
+                    <p class="mb-5"> Get the AI-powered weekly email that helps you sail through financial markets. For free.</p>
+                     <!-- Contact form -->
+                     <form action="https://www.getrevue.co/profile/brigadier_club/add_subscriber" method="post" id="subscribeform" name="revue-form"  target="_blank">
+                         <!-- Email address input-->
+                        <div class="row input-group-newsletter">
+                            <div class="col"><input class="form-control" id="subEmail" name="member[email]" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                            <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit" name="member[subscribe]" id="member_submit">Try it</button></div>
+                        </div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
+                        <!-- Submit success message-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3 mt-2">
+                                <div class="fw-bolder">Form submission successful!</div>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                    </form>
                 </div>
-              </div> 
-            </div> 
-          </div>
+            </div>
         </div>
-     </header>
-  
-     <!-- Stats -->
-
-  <section class="about r-p">
-    <div class="container">
-
-      <br>
-
-      <div class="row">    
-        <div class="col-md-12 text-center align-items-center justify-content-center">
-            <h3 align="center" style= "margin-top:0;margin-bottom:0px; font-size:14px; font-family:Helvetica Neue, Helvetica, Arial,sans-serif; font-size:18px;font-weight:400; text-transform:uppercase; letter-spacing:.1em;color:#888">
-              <span style="color:#f39f0a" > YEARS OF RESEARCH </span> IN YOUR MAILBOX, EVERY SATURDAY
-            </h3> 
-            <hr size=”10″ color="#f39f0a", width=”100%”>
+        <!-- Social Icons-->
+        <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
+        <div class="social-icons">
+            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+                <a class="btn btn-dark m-3" href="https://twitter.com/brigadier_club"><i class="fa-brands fa-twitter"></i></a>
+                <a class="btn btn-dark m-3" href="brigadier@club.com"><i class="fa-solid fa-envelope"></i></a> 
+                <a class="btn btn-dark m-3" href="https://it.linkedin.com/in/andreapirrone"><i class="fa-brands fa-linkedin-in"></i></a> 
+            </div>
         </div>
-      </div>
-
-      <br><br><br><br><br><br>
-
-      <div class="row">
-        <div class="col-md-6 text-left align-items-left justify-content-left">
-          <img src="img/analysis.svg" style="width: 100%; height:auto;">
-        </div>
-        <div class="col-md-6 text-left align-items-left justify-content-left">
-          <br><br><br>
-          <p> <span style="color:#f39f0a;">MACHINE LEARNING</span> WHICH UNRAVELS MARKETS</p>
-          <p>
-              We built machine learning algorithms which use world news to explain why
-              financial markets move. Our algorithms are based on years of scientific research carried out by 
-              universities, central banks and other institutions. 
-          </p>
-        </div>
-      </div>
-      
-
-      <br><br><br>
-      <hr size=”10″ color="#f39f0a", width=”100%”>
-      <br><br><br>
-
-      <div class="row">
-        <div class="col-md-6 text-right align-items-right justify-content-right">
-          <p>  NLP <span style="color:#f39f0a;"> WHICH EXPLAINS</span> <p>
-          <p>
-            Our systems use natural language processing (NLP) to translate the analyses of our algorithms into 
-            words easy to understand. No jargon is allowed. We also built nice, dynamic graphs to help you understand 
-            what happened in the world and its impact on financial markets.
-          </p>
-          <br><br><br>
-        </div>
-        <div class="col-md-6">
-            <img src="img/write.svg" style="width: 100%; height:auto;">
-        </div>
-      </div>
-
-      <br><br><br>
-      <hr size=”10″ color="#f39f0a", width=”100%”>
-      <br><br><br>
-
-
-      <div class="row">
-        <div class="col-md-6 text-left align-items-left justify-content-left">
-          <img src="img/newsletter.svg" style="width: 100%; height:auto;">
-        </div>
-        <div class="col-md-6 text-left align-items-left justify-content-left">
-          <br><br><br>
-          <p> <span style="color:#f39f0a;">EVERY</span> SATURDAY</p>
-          <p>
-            Everything is packed in a newsletter delivered to you every Saturday, recapping the main financial events
-            of the week and their impact. So, what are you waiting for? 
-            <a href="#header" style="color:#f39f0a;"> JOIN NOW</a> for free!
-          </p>
-        </div>
-      </div>
-    
-    </div>
-  </section>
-
-
-  <!-- footer -->
-  <footer>
-    <div class="container h-100 d-flex align-items-center justify-content-center">
-      <div class="row">
-        <div class="col">
-          <p class="text-muted" style="font-size:14px;"> 
-            © Brigadier Club 2022 |
-            <a href="https://www.brigadier.club/terms.html"> Terms </a> |
-            <a href="https://www.brigadier.club/policy.html"> Privacy </a>| 
-            <a href="https://twitter.com/brigadier_club"> <i class="fab fa-twitter"></i></a> 
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
     </body>
 </html>
