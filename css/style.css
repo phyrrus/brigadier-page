@@ -8,7 +8,7 @@
 
 /************HEADER SECTION*************/
 .header{
-background-image: url(img/wavesOpacity.svg);
+background-image: url(/img/wavesOpacity.svg);
 width:100%;
 height:900px;
 }
